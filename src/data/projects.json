@@ -1,0 +1,238 @@
+[
+  {
+    "title": "Kushion",
+    "slug": "kushion",
+    "agency": "530medialab",
+    "logo": "/projects/logos/kushion-logo.svg",
+    "screenshot": "/projects/screenshots/Kushion.jpg",
+    "link": "https://kushion.com", 
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Custom Wordpress Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"},
+      { "skill": "Custom Instagram API Feed"}
+    ]
+  },
+  {
+    "title": "Jason Markk",
+    "slug": "jason-mark",
+    "agency": "530medialab",
+    "logo": "/projects/logos/jm-logo.svg",
+    "screenshot": "/projects/screenshots/JM.jpg",
+    "video": "281115650",
+    "link": "https://jasonmarkk.com/", 
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Custom Wordpress Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"},
+      { "skill": "Custom Instagram API Feed"}
+    ]
+  },
+  {
+    "title": "Oliver Peoples",
+    "slug": "oliver-peoples",
+    "agency": "530medialab",
+    "logo": "/projects/logos/op-logo.svg",
+    "screenshot": "/projects/screenshots/OliverPeoples.jpg",
+    "video": "281115671",
+    "link": "https://oliverpeoples.com/", 
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Custom Wordpress Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "Killspencer",
+    "slug": "killspencer",
+    "agency": "530medialab",
+    "logo": "/projects/logos/ks-logo.svg",
+    "screenshot": "/projects/screenshots/Killspencer.jpg",
+    "link": "https://killspencer.com/", 
+    "skills": [
+      { "skill": "Shopify Website" }, 
+      { "skill": "Custom Shopify Theme"},
+      { "skill": "HTML\/CSS\/Liquid\/jQuery"}
+    ]
+  },
+  {
+    "title": "Mastercraft",
+    "slug": "mastercraft",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/Mastercraft.jpg",
+    "link": "http://www.mastercraft.com/", 
+    "skills": [
+      { "skill": "Codeignitor Website" }, 
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "The Craft",
+    "slug": "the-craft",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/TheCraft.jpg",
+    "video": "281115682",
+    "link": "https://craftlife.com/", 
+    "skills": [
+      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "Armada Skis",
+    "slug": "armada",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/ArmadaSkis.jpg",
+    "link": "https://armadaskis.com/", 
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Custom Wordpress Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "Alain Mikli",
+    "slug": "alain-mikli",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/Alainmikli.jpg",
+    "link": "http://www.alainmikli.com/", 
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Custom Wordpress Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "TCS Jerky",
+    "slug": "tcs-jerky",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/TcsJerky.jpg",
+    "link": "https://www.tcsjerky.com/", 
+    "skills": [
+      { "skill": "Wordpress\/Magento Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "Edgeproducts",
+    "slug": "edgeproducts",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/Edge.jpg",
+    "link": "https://edgeproducts.com/", 
+    "skills": [
+      { "skill": "Wordpress\/Magento Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "Superchips",
+    "slug": "superchips",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/Superchips.jpg",
+    "link": "https://superchips.com/", 
+    "skills": [
+      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "Diablosport",
+    "slug": "diablosport",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/Diablosport.jpg",
+    "link": "http://www.diablosport.com", 
+    "skills": [
+      { "skill": "Wordpress\/Magento Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"}
+    ]
+  },
+  {
+    "title": "AMI Styling",
+    "slug": "ami-styling",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/AMI.jpg",
+    "link": "https://amistyling.com/", 
+    "skills": [
+      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"},
+      { "skill": "Custom Instagram API Feed"}
+    ]
+  },
+  {
+    "title": "Readylift",
+    "slug": "readylift",
+    "agency": "530medialab",
+    "logo": "",
+    "screenshot": "/projects/screenshots/Readylift.jpg",
+    "link": "https://www.readylift.com/", 
+    "skills": [
+      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Custom Wordpress\/Magento Theme"},
+      { "skill": "HTML\/CSS\/PHP\/jQuery"},
+      { "skill": "Custom Instagram API Feed"}
+    ]
+  },
+  {
+    "title": "TKFit",
+    "slug": "tkfit",
+    "agency": "",
+    "logo": "",
+    "screenshot": "/projects/screenshots/TKFit1.jpg",
+    "link": "https://tkfitep.com/", 
+    "skills": [
+      { "skill": "Wordpress Website" }, 
+      { "skill": "Enfold Gym Theme"}
+    ]
+  },
+  {
+    "title": "Arlo CES 2019",
+    "slug": "arlo-ces-2019",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/projects/screenshots/ArloCES.gif",
+    "link": "", 
+    "skills": [
+      { "skill": "React Microsite" }
+    ]
+  },
+  {
+    "title": "Vizio - TVP",
+    "slug": "vizio-tvp",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/projects/screenshots/TVP.jpg",
+    "link": "https://tvp.vizio.com/", 
+    "skills": [
+      { "skill": "Custom Static Website" }, 
+      { "skill": "HTML\/CSS\/jQuery\/Swig"}
+    ]
+  },
+  {
+    "title": "Vanity planet",
+    "slug": "vanity-planet",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/projects/screenshots/VanityPlanet.jpg",
+    "link": "https://www.vanityplanet.com/", 
+    "skills": [
+      { "skill": "Shopify Website" }, 
+      { "skill": "Customized Shopify Prestige Theme"},
+      { "skill": "HTML\/CSS\/jQuery\/Liquid"}
+    ]
+  }
+]
