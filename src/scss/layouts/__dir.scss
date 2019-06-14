@@ -1,0 +1,11 @@
+// -- Import Layout Partials -- //
+
+/*
+ * This file is used to contain all layout imports.
+ * Files inside this folder should contain all styles relating to a reusable layouts.
+ *
+ * IMPORTANT NOTE
+ * Layouts SCSS shouldn't really have to be used. They're here just in case.
+*/
+
+@import 'layouts'; // this should always be first
