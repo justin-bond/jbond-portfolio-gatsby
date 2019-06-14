@@ -5,7 +5,7 @@ export default () => <div>
   <AniLink 
     to="/project/kushion"
     cover
-    bg="#000"
+    bg="#191919"
     direction="right"
     duration={1}
   >

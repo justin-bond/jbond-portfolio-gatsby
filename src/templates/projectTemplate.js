@@ -1,15 +1,27 @@
 import React from 'react';
+import classNames from 'classnames';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+const nsBase = 'template';
+const ns = `${nsBase}-project`;
+
 const projectTemplate = ({ data }) => {
   const project = data.projectsJson;
 
+  const rootClassnames = classNames({
+    [`${nsBase} ${ns}`]: true,
+    [`${ns}--${project.slug}`]: project.slug,
+  });
+
+
   return (
-    <div className="project-page">
-      <Helmet title={ `${project.title} | Justin Bond` } />
-        {project.title}
+    <div className={rootClassnames}>
+      <Helmet>
+        <title>{project.title} | Justin Bond</title>
+      </Helmet>
+      {project.title}
       <div className="blog-post">
 
       </div>
@@ -20,7 +32,8 @@ const projectTemplate = ({ data }) => {
 projectTemplate.propTypes = {
   data: PropTypes.shape({
     projectsJson: PropTypes.shape({
-       title: PropTypes.string
+       title: PropTypes.string,
+       slug: PropTypes.string
     }),
   }),
 }
@@ -28,7 +41,8 @@ projectTemplate.propTypes = {
 export const pageQuery = graphql`
   query ProjectPageTemplate($id: String!) {
     projectsJson(id: { eq: $id }) {
-      title
+      title,
+      slug
     }
   }
 `;
