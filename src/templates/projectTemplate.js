@@ -7,10 +7,9 @@ const projectTemplate = ({ data }) => {
   const project = data.projectsJson;
 
   return (
-    <div className="blog-post-container">
-      <Helmet title={ `${project.title} | Test Site` } />
+    <div className="project-page">
+      <Helmet title={ `${project.title} | Justin Bond` } />
         {project.title}
-        {project.vimeoId}
       <div className="blog-post">
 
       </div>
