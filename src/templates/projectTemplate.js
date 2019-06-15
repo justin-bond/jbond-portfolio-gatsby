@@ -19,7 +19,7 @@ const projectTemplate = ({ data }) => {
   return (
     <div className={rootClassnames}>
       <Helmet>
-        <title>{project.title} | Justin Bond</title>
+        <title>{project.title}</title>
       </Helmet>
       {project.title}
       <div className="blog-post">

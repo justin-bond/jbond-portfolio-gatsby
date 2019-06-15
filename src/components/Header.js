@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
+import Container from './Container';
+
 import logo from '../../static/assets/jb-logo.svg';
 
 const nsBase = 'component';
@@ -32,11 +34,18 @@ const Header = () => {
     });
   }
 
+  const handleClick = () => {
+    setHeaderState(prevState => {
+      return { ...prevState, 'menuActive': !headerState.menuActive ? true : false}
+    });
+  }
+
   const scrolled = headerState.scrollPosition > 50 ? 'scrolled' : '';
-  console.log(scrolled)
+  const menuActive = headerState.menuActive ? 'active' : '';
+
   return (
-    <header className={`${rootClassnames} container`}>
-      <div className="row">
+    <header className={rootClassnames}>
+      <Container>
         <AniLink
           to="/"
           cover
@@ -46,8 +55,8 @@ const Header = () => {
         >
           <img src={logo} className={`${ns}__logo`} alt="logo" />
         </AniLink>
-      </div>
-      <div id="site-menu" className={`site-menu ${scrolled} ${headerState.menuActive}`}>
+      </Container>
+      <div id="site-menu" className={`site-menu ${scrolled} ${menuActive}`}>
         <div className="site-menu__wrapper">
           <nav className="site-menu__navigation">
             <ul>
@@ -57,7 +66,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <div className="site-menu__control" onClick={()=>this.handleClick()}>
+        <div className="site-menu__control" onClick={()=>handleClick()}>
           <div className="site-menu__menu-button">
             <div className="nav-top">
               <div className="nav-top__left"></div>

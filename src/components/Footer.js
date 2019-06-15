@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import Container from './Container';
+
 const nsBase = 'component';
 const ns = `${nsBase}-footer`;
 
@@ -12,7 +14,9 @@ const Footer = () => {
 
   return (
     <footer className={rootClassnames}>
-      Justin Bond© {date}
+      <Container>
+        Justin Bond© {date}
+      </Container>
     </footer>
   )
 };

@@ -19,8 +19,7 @@ const DefaultLayout = (props) => {
 
   return (
     <div className={rootClassnames}>
-      <Helmet>
-        <title>Justin Bond</title>
+      <Helmet defaultTitle="Justin Bond" titleTemplate="%s | Justin Bond">
         <meta name="description" content="Hello, I'm Justin Bond and I am a full-stack web developer from Costa Mesa, California." />
       </Helmet>
       <Header />
