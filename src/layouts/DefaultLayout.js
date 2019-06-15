@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Helmet from 'react-helmet';
 
@@ -29,6 +30,14 @@ const DefaultLayout = (props) => {
       <Footer />
     </div>
   );
+};
+
+DefaultLayout.propTypes = {
+  children: PropTypes.node
+};
+
+DefaultLayout.defaultProps = {
+  children: null
 };
 
 export default DefaultLayout;

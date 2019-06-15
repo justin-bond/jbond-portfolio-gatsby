@@ -1,6 +1,6 @@
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const nsBase = 'component';
 const ns = `${nsBase}-container`;
