@@ -1,1 +1,23 @@
 // -- Typography Mixins -- //
+
+@mixin link-underline {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    width: 0px;
+    height: 1px;
+    margin: 5px 0 0;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    left: 0;
+    background-color: currentColor;
+  }
+  &:hover {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}

@@ -1,7 +1,10 @@
-import React from "react"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import React from "react";
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
-export default () => <div>
+import HomeIntro from '../components/HomeIntro';
+
+export default () => <div id="work">
+  <HomeIntro />
   <AniLink 
     to="/project/kushion"
     cover

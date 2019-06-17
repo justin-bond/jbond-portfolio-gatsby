@@ -22,6 +22,15 @@ module.exports = {
       options: {
         layout: require.resolve(`./src/layouts/DefaultLayout.js`)
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Raleway\:600,700`,
+          `Share Tech Mono`
+        ]
+      }
     }
   ],
 }

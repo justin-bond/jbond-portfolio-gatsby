@@ -57,9 +57,9 @@ const Header = () => {
         <div className='site-menu__wrapper'>
           <nav className='site-menu__navigation'>
             <ul>
-              <li><div className='link__underline'>Home</div></li>
-              <li><div className='link__underline'>Work</div></li>
-              <li><div className='link__underline'>Contact</div></li>
+              <li><AnchorLink to='/' className='link__underline'>Home</AnchorLink></li>
+              <li><AnchorLink to='/#work' className='link__underline'>Work</AnchorLink></li>
+              <li><AnchorLink to='#contact' className='link__underline'>Contact</AnchorLink></li>
             </ul>
           </nav>
         </div>

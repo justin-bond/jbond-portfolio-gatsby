@@ -96,6 +96,8 @@ $ns: '.component-header';
   }
   li {
     margin-right: 25px;
+    @include link-underline;
+    
     @include at-laptop {
       margin-right: 75px;
     }
