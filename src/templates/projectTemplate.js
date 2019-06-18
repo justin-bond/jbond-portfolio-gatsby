@@ -15,28 +15,30 @@ const projectTemplate = ({ data }) => {
     [`${ns}--${project.slug}`]: project.slug,
   });
 
-
   return (
     <div className={rootClassnames}>
       <Helmet>
         <title>{project.title}</title>
       </Helmet>
-      {project.title}
-      <div className="blog-post">
-
+      <div className={`${ns}__project`}>
+        {project.title}
       </div>
     </div>
   );
-}
+};
 
 projectTemplate.propTypes = {
   data: PropTypes.shape({
     projectsJson: PropTypes.shape({
-       title: PropTypes.string,
-       slug: PropTypes.string
+      title: PropTypes.string,
+      slug: PropTypes.string
     }),
   }),
-}
+};
+
+projectTemplate.defaultProps = {
+  data: null
+};
 
 export const pageQuery = graphql`
   query ProjectPageTemplate($id: String!) {

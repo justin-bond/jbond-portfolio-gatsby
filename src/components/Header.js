@@ -19,15 +19,15 @@ const Header = () => {
     <header className={rootClassnames}>
       <Container>
         <AnchorLink
-          to='/'
-          direction='left'
+          to={'/'}
+          direction={'left'}
         >
-          <img src={logo} className={`${ns}__logo`} alt='logo' />
+          <img src={logo} className={`${ns}__logo`} alt={'logo'} />
         </AnchorLink>
       </Container>
       <Nav />
     </header>
-  )
+  );
 };
 
 export default Header;

@@ -44,26 +44,26 @@ const AnchorLink = (props) => {
       <a className={rootClassnames} href={to} target={targetOption}>
         {children}
       </a>
-    )
+    );
   } else if (!cover) {
-     RenderedAnchorLink = (
+    RenderedAnchorLink = (
       <Link className={rootClassnames} to={to}>
         {children}
       </Link>
-    )
+    );
   } else {
     RenderedAnchorLink = (
       <AniLink
         className={rootClassnames}
         to={to}
         cover
-        bg='#191919'
+        bg={'#191919'}
         direction={direction}
         duration={1}
       >
         {children}
       </AniLink>
-    )
+    );
   }
 
   return RenderedAnchorLink;

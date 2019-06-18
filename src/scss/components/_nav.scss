@@ -59,6 +59,7 @@ $ns: '.component-nav';
     display: block;
     cursor: pointer;
     background: #191919;
+    padding: 0;
     padding-right: 40px;
 
     @include at-tablet {

@@ -15,10 +15,11 @@ const Footer = () => {
   return (
     <footer className={rootClassnames}>
       <Container>
-        Justin Bond© {date}
+        Justin Bond©
+        {date}
       </Container>
     </footer>
-  )
+  );
 };
 
 export default Footer;

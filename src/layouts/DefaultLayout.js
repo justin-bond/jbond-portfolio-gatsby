@@ -18,15 +18,15 @@ const DefaultLayout = (props) => {
     children
   } = props;
 
-  if (typeof window !== "undefined") {
+  if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
-    require("smooth-scroll")('a[href*="#"]')
+    require('smooth-scroll')('a[href*="#"]');
   }
 
   return (
     <div className={rootClassnames}>
-      <Helmet defaultTitle="Justin Bond" titleTemplate="%s | Justin Bond">
-        <meta name="description" content="Hello, I'm Justin Bond and I am a full-stack web developer from Costa Mesa, California." />
+      <Helmet defaultTitle={'Justin Bond'} titleTemplate={'%s | Justin Bond'}>
+        <meta name={'description'} content={'Hello, I‘m Justin Bond and I am a full-stack web developer from Costa Mesa, California.'} />
       </Helmet>
       <Header />
       <div className={`${ns}__content`}>

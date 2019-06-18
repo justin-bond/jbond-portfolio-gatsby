@@ -1,0 +1,34 @@
+{
+  "extends": "airbnb",
+  "plugins": ["react"],
+  "rules": {
+    "indent": ["error", 2],
+    "comma-dangle": [
+      "error",
+      {
+        "objects": "only-multiline",
+        "arrays": "only-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never",
+      },
+    ],
+    'arrow-body-style': ['error', 'always'],
+
+    // options to emulate prettier setup
+    'semi': ['error', 'always'],
+    'max-len': ['error', { code: 160, 'ignoreUrls': true }], // was 80
+    'template-curly-spacing': 0,
+    'arrow-parens': ['error', 'always'],
+    'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
+
+    // react plugin - options
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'react/jsx-filename-extension': [1, { 'extensions': ['.js'] }], // use only .js files
+    'react/jsx-curly-brace-presence': [1, { 'props': 'always', 'children': 'never' }],
+  },
+  "globals": {
+    "window": true,
+  }
+}

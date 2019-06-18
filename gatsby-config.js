@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
+    `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
