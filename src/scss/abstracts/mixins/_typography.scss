@@ -2,8 +2,9 @@
 
 @mixin link-underline {
   position: relative;
+
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -5px;
     width: 0px;
@@ -14,6 +15,7 @@
     left: 0;
     background-color: currentColor;
   }
+  
   &:hover {
     &:after {
       width: 100%;

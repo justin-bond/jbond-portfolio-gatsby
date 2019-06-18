@@ -23,12 +23,14 @@ $ns: '.component-home-intro';
 
   &__bullets {
     font-family: $share-tech-mono;
+
     li {
       margin-bottom: 31px;
       margin-left: 40px;
+      
       &:before {
         color: solid-color('code-blue');
-        content: "//";
+        content: '//';
         margin-left: -40px;
         margin-right: 20px;
       }

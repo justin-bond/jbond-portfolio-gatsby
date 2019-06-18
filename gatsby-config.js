@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     `gatsby-plugin-eslint`,
+    `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -31,6 +32,13 @@ module.exports = {
           `Raleway\:600,700`,
           `Share Tech Mono`
         ]
+      }
+    },
+    {
+      resolve: `@danbruegge/gatsby-plugin-stylelint`,
+      options: {
+        files: `**/*.scss`,
+        context: `${ __dirname }/src/scss`
       }
     }
   ],
