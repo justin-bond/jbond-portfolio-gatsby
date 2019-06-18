@@ -12,7 +12,7 @@ const HomeIntro = (props) => {
   });
 
   return (
-    <Container>
+    <Container size='small'>
       <div className={rootClassnames}>
         <h1 className={`${ns}__text`}>
           Hello, I'm Justin Bond and I am a full-stack web developer in Orange County, California.

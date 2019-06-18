@@ -1,0 +1,214 @@
+// -- Nav -- //
+
+$ns: '.component-nav';
+
+#{$ns} {
+  color: #fff;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 150px;
+  overflow: hidden;
+  background: #191919;
+  transition: max-width .3s;
+
+    &.active {
+      max-width: 350px;
+
+      #{$ns}__wrapper {
+        opacity: 1;
+        transform: translateX(0%);
+      }
+    }
+
+  @include at-tablet {
+    position: fixed;
+    overflow: visible;
+    max-width: 350px;
+
+    &.scrolled {
+      max-width: 0px;
+
+      #{$ns}__wrapper {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+
+      #{$ns}__control {
+        display: block;
+      }
+
+      &.active {
+        max-width: 350px;
+        
+        #{$ns}__wrapper {
+          opacity: 1;
+          transform: translateX(-40%);
+        }
+      }
+    }
+  }
+
+  &__control {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    // width: 115px;
+    display: block;
+    cursor: pointer;
+    background: #191919;
+    padding-right: 40px;
+
+    @include at-tablet {
+      position: fixed;
+      top: 65px;
+      display: none;
+    }
+  }
+
+  &__wrapper {
+    background: #191919;
+    transition: background .3s;
+    padding: 45px 15px;
+    overflow: hidden;
+    transition: opacity .3s,transform .5s;
+    opacity: 0;
+    transform: translateX(100%);
+
+    @include at-tablet {
+      padding: 45px 25px;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  &__navigation {
+    ul {
+      display: flex;
+    }
+
+    li {
+      margin-right: 25px;
+      @include link-underline;
+      
+      @include at-tablet {
+        margin-right: 75px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > * {
+        display: inline-block;
+        // border-bottom: 2px solid transparent;
+        transition: border-bottom .3s;
+        color: #fff;
+        line-height: 4em;
+        &:after {
+          height: 2px;
+        }
+        &:hover {
+          // border-bottom: 2px solid #fff;
+        }
+      }
+    }
+  }
+
+  &__menu-top,
+  &__menu-middle,
+  &__menu-bottom {
+    line-height: 0;
+    text-align: right;
+    margin: 4.5px 0;
+
+    > div {
+      height: 5.5px;
+      display: inline-block;
+      margin-right: 2.5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__menu-top__left {
+    width: 21px;
+    background-color: #F8F8F8;
+    animation-name: top__left;
+    animation-duration: 0.4s;
+  }
+
+  &__menu-top__middle {
+    width: 23px;
+    background-color: #10D0D0;
+    animation-name: top__middle;
+    animation-duration: 0.4s;
+  }
+
+  &__menu-top__right {
+    width: 6.5px;
+    background-color: #F8F8F8;
+    animation-name: top__right;
+    animation-duration: 0.4s;
+  }
+
+  &__menu-middle__left {
+    width: 18px;
+    background-color: #F8F8F8;
+    animation-name: middle__left;
+    animation-duration: 0.4s;
+  }
+
+  &__menu-middle__right {
+    width: 44px;
+    background-color: #FFF146;
+    animation-name: middle__right;
+    animation-duration: 0.4s;
+  }
+
+  &__menu-bottom__left {
+    width: 18px;
+    background-color: #F8F8F8;
+    animation-name: bottom__left;
+    animation-duration: 0.4s;
+  }
+
+  &__menu-bottom__right {
+    width: 6.5px;
+    background-color: #FF21B2;
+    animation-name: bottom__right;
+    animation-duration: 0.4s;
+  }
+}
+
+@keyframes top__left {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes top__middle {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes top__right {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes middle__left {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes middle__right {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes bottom__left {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}
+@keyframes bottom__right {
+    0% { transform: translateX(360%); }
+    100% { transform: translateX(0%); }
+}

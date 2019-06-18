@@ -6,13 +6,16 @@ const nsBase = 'component';
 const ns = `${nsBase}-container`;
 
 const Container = (props) => {
+  const {
+    children,
+    size
+  } = props;
+
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${nsBase} ${ns}`]: true,
+    [`${size}`]: size
   });
 
-  const {
-    children
-  } = props;
 
   return (
     <div className={rootClassnames}>
@@ -22,11 +25,13 @@ const Container = (props) => {
 };
 
 Container.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  size: PropTypes.string
 };
 
 Container.defaultProps = {
-  children: null
+  children: null,
+  size: null
 };
 
 export default Container;
