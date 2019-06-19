@@ -4,6 +4,8 @@ import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import Contact from '../components/Contact';
+
 const nsBase = 'template';
 const ns = `${nsBase}-project`;
 
@@ -23,6 +25,7 @@ const projectTemplate = ({ data }) => {
       <div className={`${ns}__project`}>
         {project.title}
       </div>
+      <Contact />
     </div>
   );
 };

@@ -11,7 +11,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     `gatsby-plugin-eslint`,
-    `gatsby-plugin-eslint`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

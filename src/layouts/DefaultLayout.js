@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import Helmet from 'react-helmet';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -18,6 +20,8 @@ const DefaultLayout = (props) => {
     children
   } = props;
 
+  library.add(fab);
+
   if (typeof window !== 'undefined') {
     // eslint-disable-next-line global-require
     require('smooth-scroll')('a[href*="#"]');
@@ -26,6 +30,7 @@ const DefaultLayout = (props) => {
   return (
     <div className={rootClassnames}>
       <Helmet defaultTitle={'Justin Bond'} titleTemplate={'%s | Justin Bond'}>
+        <html lang={'en'} />
         <meta name={'description'} content={'Hello, I‘m Justin Bond and I am a full-stack web developer from Costa Mesa, California.'} />
       </Helmet>
       <Header />

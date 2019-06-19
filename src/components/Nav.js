@@ -55,6 +55,7 @@ const Nav = () => {
         className={`${ns}__control`}
         type={`button`}
         onClick={(e) => { handleClick(e); }}
+        aria-label={`Menu Toggle`}
       >
         <div className={`${ns}__menu-button`}>
           <div className={`${ns}__menu-top`}>

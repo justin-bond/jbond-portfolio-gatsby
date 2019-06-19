@@ -41,7 +41,7 @@ const AnchorLink = (props) => {
 
   if (isExternalUrl()) {
     RenderedAnchorLink = (
-      <a className={rootClassnames} href={to} target={targetOption}>
+      <a className={rootClassnames} href={to} target={targetOption} aria-label={'external link'} rel={'noopener noreferrer'}>
         {children}
       </a>
     );

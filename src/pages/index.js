@@ -2,10 +2,11 @@ import React from 'react';
 import AniLink from 'gatsby-plugin-transition-link/AniLink';
 
 import HomeIntro from '../components/HomeIntro';
+import Contact from '../components/Contact';
 
 const Index = () => {
   return (
-    <div id={'work'}>
+    <div>
       <HomeIntro />
       <AniLink
         to={'/project/kushion'}
@@ -23,6 +24,7 @@ const Index = () => {
       >
         project 2
       </AniLink>
+      <Contact />
     </div>
   );
 };

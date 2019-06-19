@@ -9,6 +9,7 @@ $ns: '.component-container';
   max-width: 1440px;
 
   &.small {
+    width: 83.33%;
     max-width: 1200px;
   }
 }
