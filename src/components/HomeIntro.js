@@ -15,18 +15,16 @@ const HomeIntro = () => {
     <Container size={'small'}>
       <div className={rootClassnames}>
         <h1 className={`${ns}__text`}>
-          Hello, I‘m Justin Bond and I am a full-stack web developer in Orange County, California.
+          Hello, I‘m Justin Bond and I am a Front-End Web Developer in Orange County, CA.
         </h1>
-        <div className={`${ns}__bullets`}>
-          <ul>
-            <li>
-              Skilled in Wordpress, Magento, Shopify, PHP, and Javascript.
-            </li>
-            <li>
-              When I am not coding I enjoy listening to music, watching football, golfing, riding motorcycles, and going on hikes with my fur child.
-            </li>
-          </ul>
-        </div>
+        <ul className={`${ns}__bullets`}>
+          <li>
+            Skilled in Wordpress, Magento, Shopify, React, PHP, and Javascript.
+          </li>
+          <li>
+            When I am not coding I enjoy listening to music, watching football, golfing, riding motorcycles, and going on hikes with my fur child.
+          </li>
+        </ul>
       </div>
     </Container>
   );

@@ -43,8 +43,8 @@ projectTemplate.defaultProps = {
   data: null
 };
 
-export const pageQuery = graphql`
-  query ProjectPageTemplate($id: String!) {
+export const query = graphql`
+  query($id: String!) {
     projectsJson(id: { eq: $id }) {
       title,
       slug

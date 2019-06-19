@@ -73,7 +73,7 @@ AnchorLink.propTypes = {
   children: PropTypes.node,
   cover: PropTypes.bool,
   direction: PropTypes.string,
-  target: PropTypes.bool,
+  target: PropTypes.string,
   to: PropTypes.string.isRequired
 };
 
