@@ -1,38 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
 import { graphql } from 'gatsby';
 
 import Contact from '../components/Contact';
+import Container from '../components/Container';
 import HomeIntro from '../components/HomeIntro';
 import HomeRecentWork from '../components/HomeRecentWork';
+import HomeOtherWork from '../components/HomeOtherWork';
 
 const Index = ({ data }) => {
   const {
-    recentProjects
+    recentProjects,
+    otherProjects
   } = data;
 
   return (
     <div>
-      <HomeIntro />
-      <HomeRecentWork recentProjects={recentProjects.edges} />
-      <AniLink
-        to={'/project/kushion'}
-        cover
-        bg={'#191919'}
-        direction={'right'}
-        duration={1}
-      >
-        Kushion
-      </AniLink>
-      <br />
-      <AniLink
-        fade
-        to={'project/vizio-tvp'}
-      >
-        project 2
-      </AniLink>
-      <Contact />
+      <Container size={'small'}>
+        <HomeIntro />
+        <HomeRecentWork recentProjects={recentProjects.edges} />
+        <HomeOtherWork otherProjects={otherProjects.edges} />
+        <Contact />
+      </Container>
     </div>
   );
 };

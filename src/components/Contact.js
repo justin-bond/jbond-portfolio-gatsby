@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import AnchorLink from './AnchorLink';
-import Container from './Container';
 
 const nsBase = 'component';
 const ns = `${nsBase}-contact`;
@@ -105,67 +104,65 @@ const Contact = () => {
 
   const formShow = contactState.formShow ? '' : 'collapse';
   return (
-    <Container size={'small'}>
-      <div id={'contact'} className={rootClassnames}>
-        <div className={`${ns}--form__container`}>
-          <div className={`${ns}--form__title`}>
-            Lets Talk
-          </div>
-          <form className={`${ns}--form ${formShow}`} onSubmit={(e) => { submitForm(e); }}>
-            <div className={`${ns}--form__name`}>
-              <label htmlFor={'name'}>
-                Your Name*
-                <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formName'} id={'name'} required />
-              </label>
-            </div>
-            <div className={`${ns}--form__email`}>
-              <label htmlFor={'email'}>
-                Email Address*
-                <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formEmail'} id={'email'} required />
-              </label>
-            </div>
-            <div className={`${ns}--form__phone`}>
-              <label htmlFor={'phone'}>
-                Phone*
-                <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formPhone'} id={'phone'} required />
-              </label>
-            </div>
-            <div className={`${ns}--form__company`}>
-              <label htmlFor={'company'}>
-                Company
-                <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formCompany'} id={'company'} />
-              </label>
-            </div>
-            <div className={`${ns}--form__message`}>
-              <label htmlFor={'message'}>
-                Message*
-                <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formMessage'} id={'message'} required />
-              </label>
-            </div>
-            <div className={`${ns}--form__submit`}>
-              <button type={'submit'} className={'btn--primary'}>
-                Submit Message
-              </button>
-            </div>
-          </form>
-          { getFormResponse() }
+    <div id={'contact'} className={rootClassnames}>
+      <div className={`${ns}--form__container`}>
+        <div className={`${ns}--form__title`}>
+          Lets Talk
         </div>
-        <div className={`${ns}--social`}>
-          <div>Follow Me On</div>
-          <div className={`${ns}--social__icons`}>
-            <AnchorLink to={'https://www.linkedin.com/in/justinbond909/'} target={'_blank'}>
-              <FontAwesomeIcon icon={['fab', 'linkedin']} />
-            </AnchorLink>
-            <AnchorLink to={'https://github.com/geekster909'} target={'_blank'}>
-              <FontAwesomeIcon icon={['fab', 'github']} />
-            </AnchorLink>
-            <AnchorLink to={'https://codepen.io/geekster909/'} target={'_blank'}>
-              <FontAwesomeIcon icon={['fab', 'codepen']} />
-            </AnchorLink>
+        <form className={`${ns}--form ${formShow}`} onSubmit={(e) => { submitForm(e); }}>
+          <div className={`${ns}--form__name`}>
+            <label htmlFor={'name'}>
+              Your Name*
+              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formName'} id={'name'} required />
+            </label>
           </div>
+          <div className={`${ns}--form__email`}>
+            <label htmlFor={'email'}>
+              Email Address*
+              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formEmail'} id={'email'} required />
+            </label>
+          </div>
+          <div className={`${ns}--form__phone`}>
+            <label htmlFor={'phone'}>
+              Phone*
+              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formPhone'} id={'phone'} required />
+            </label>
+          </div>
+          <div className={`${ns}--form__company`}>
+            <label htmlFor={'company'}>
+              Company
+              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formCompany'} id={'company'} />
+            </label>
+          </div>
+          <div className={`${ns}--form__message`}>
+            <label htmlFor={'message'}>
+              Message*
+              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formMessage'} id={'message'} required />
+            </label>
+          </div>
+          <div className={`${ns}--form__submit`}>
+            <button type={'submit'} className={'btn--primary'}>
+              Submit Message
+            </button>
+          </div>
+        </form>
+        { getFormResponse() }
+      </div>
+      <div className={`${ns}--social`}>
+        <div>Follow Me On</div>
+        <div className={`${ns}--social__icons`}>
+          <AnchorLink to={'https://www.linkedin.com/in/justinbond909/'} target={'_blank'}>
+            <FontAwesomeIcon icon={['fab', 'linkedin']} />
+          </AnchorLink>
+          <AnchorLink to={'https://github.com/geekster909'} target={'_blank'}>
+            <FontAwesomeIcon icon={['fab', 'github']} />
+          </AnchorLink>
+          <AnchorLink to={'https://codepen.io/geekster909/'} target={'_blank'}>
+            <FontAwesomeIcon icon={['fab', 'codepen']} />
+          </AnchorLink>
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 

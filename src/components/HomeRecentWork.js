@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 import AnchorLink from './AnchorLink';
-import Container from './Container';
 
 const nsBase = 'component';
 const ns = `${nsBase}-home-recent-work`;
@@ -38,16 +37,14 @@ const HomeRecentWork = (props) => {
   };
 
   return (
-    <Container size={'small'}>
-      <div className={rootClassnames}>
-        <h1 className={`${ns}__text`}>
-          Recent Work
-        </h1>
-        <div className={`${ns}__items`}>
-          {recentProjects.map(renderRecentWork)}
-        </div>
+    <div className={rootClassnames}>
+      <h1 className={`${ns}__text`}>
+        Recent Work
+      </h1>
+      <div className={`${ns}__items`}>
+        {recentProjects.map(renderRecentWork)}
       </div>
-    </Container>
+    </div>
   );
 };
 
