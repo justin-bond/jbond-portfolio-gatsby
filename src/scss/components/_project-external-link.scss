@@ -1,0 +1,13 @@
+// -- Project External Link -- //
+
+$ns: '.component-project-external-link';
+
+#{$ns} {
+  font-family: $share-tech-mono;
+  margin-bottom: 22px;
+
+  a {
+    color: solid-color('code-blue');
+    @include link-underline;
+  }
+}

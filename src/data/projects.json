@@ -6,9 +6,9 @@
     "agency": "530medialab",
     "logo": "/assets/logos/kushion-logo.svg",
     "screenshot": "/assets/screenshots/Kushion.jpg",
-    "link": "https://kushion.com", 
+    "link": "https://kushion.com",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Wordpress\/WooCommerce Website" },
       { "skill": "Custom Wordpress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
@@ -22,9 +22,9 @@
     "logo": "/assets/logos/jm-logo.svg",
     "screenshot": "/assets/screenshots/JM.jpg",
     "video": "281115650",
-    "link": "https://jasonmarkk.com/", 
+    "link": "https://jasonmarkk.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Wordpress\/WooCommerce Website" },
       { "skill": "Custom Wordpress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
@@ -38,9 +38,9 @@
     "logo": "/assets/logos/op-logo.svg",
     "screenshot": "/assets/screenshots/OliverPeoples.jpg",
     "video": "281115671",
-    "link": "https://oliverpeoples.com/", 
+    "link": "https://oliverpeoples.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Wordpress\/WooCommerce Website" },
       { "skill": "Custom Wordpress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -52,9 +52,9 @@
     "agency": "530medialab",
     "logo": "/assets/logos/ks-logo.svg",
     "screenshot": "/assets/screenshots/Killspencer.jpg",
-    "link": "https://killspencer.com/", 
+    "link": "https://killspencer.com/",
     "skills": [
-      { "skill": "Shopify Website" }, 
+      { "skill": "Shopify Website" },
       { "skill": "Custom Shopify Theme" },
       { "skill": "HTML\/CSS\/Liquid\/jQuery" }
     ]
@@ -66,9 +66,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Mastercraft.jpg",
-    "link": "http://www.mastercraft.com/", 
+    "link": "http://www.mastercraft.com/",
     "skills": [
-      { "skill": "Codeignitor Website" }, 
+      { "skill": "Codeignitor Website" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -80,9 +80,9 @@
     "logo": "",
     "screenshot": "/assets/screenshots/TheCraft.jpg",
     "video": "281115682",
-    "link": "https://craftlife.com/", 
+    "link": "https://craftlife.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Wordpress\/Magento 2 Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -94,9 +94,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/ArmadaSkis.jpg",
-    "link": "https://armadaskis.com/", 
+    "link": "https://armadaskis.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Wordpress\/WooCommerce Website" },
       { "skill": "Custom Wordpress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -108,9 +108,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Alainmikli.jpg",
-    "link": "http://www.alainmikli.com/", 
+    "link": "http://www.alainmikli.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" }, 
+      { "skill": "Wordpress\/WooCommerce Website" },
       { "skill": "Custom Wordpress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -122,9 +122,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/TcsJerky.jpg",
-    "link": "https://www.tcsjerky.com/", 
+    "link": "https://www.tcsjerky.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento Website" }, 
+      { "skill": "Wordpress\/Magento Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -136,9 +136,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Edge.jpg",
-    "link": "https://edgeproducts.com/", 
+    "link": "https://edgeproducts.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento Website" }, 
+      { "skill": "Wordpress\/Magento Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -150,9 +150,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Superchips.jpg",
-    "link": "https://superchips.com/", 
+    "link": "https://superchips.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Wordpress\/Magento 2 Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -164,9 +164,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Diablosport.jpg",
-    "link": "http://www.diablosport.com", 
+    "link": "http://www.diablosport.com",
     "skills": [
-      { "skill": "Wordpress\/Magento Website" }, 
+      { "skill": "Wordpress\/Magento Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
@@ -178,9 +178,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/AMI.jpg",
-    "link": "https://amistyling.com/", 
+    "link": "https://amistyling.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Wordpress\/Magento 2 Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
@@ -193,9 +193,9 @@
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Readylift.jpg",
-    "link": "https://www.readylift.com/", 
+    "link": "https://www.readylift.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" }, 
+      { "skill": "Wordpress\/Magento 2 Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
@@ -208,9 +208,9 @@
     "agency": "",
     "logo": "",
     "screenshot": "/assets/screenshots/TKFit1.jpg",
-    "link": "https://tkfitep.com/", 
+    "link": "https://tkfitep.com/",
     "skills": [
-      { "skill": "Wordpress Website" }, 
+      { "skill": "Wordpress Website" },
       { "skill": "Enfold Gym Theme" }
     ]
   },
@@ -221,7 +221,7 @@
     "agency": "Envoy",
     "logo": "",
     "screenshot": "/assets/screenshots/ArloCES.gif",
-    "link": "", 
+    "link": "",
     "skills": [
       { "skill": "React Microsite" }
     ]
@@ -233,9 +233,9 @@
     "agency": "Envoy",
     "logo": "",
     "screenshot": "/assets/screenshots/TVP.jpg",
-    "link": "https://tvp.vizio.com/", 
+    "link": "https://tvp.vizio.com/",
     "skills": [
-      { "skill": "Custom Static Website" }, 
+      { "skill": "Custom Static Website" },
       { "skill": "HTML\/CSS\/jQuery\/Swig" }
     ]
   },
@@ -246,9 +246,9 @@
     "agency": "Envoy",
     "logo": "",
     "screenshot": "/assets/screenshots/VanityPlanet.jpg",
-    "link": "https://www.vanityplanet.com/", 
+    "link": "https://www.vanityplanet.com/",
     "skills": [
-      { "skill": "Shopify Website" }, 
+      { "skill": "Shopify Website" },
       { "skill": "Customized Shopify Prestige Theme" },
       { "skill": "HTML\/CSS\/jQuery\/Liquid" }
     ]

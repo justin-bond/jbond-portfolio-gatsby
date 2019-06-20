@@ -1,0 +1,19 @@
+// -- Project Template -- //
+
+$ns: '.template-project';
+
+#{$ns} {
+  &__container {
+    padding-bottom: 100px;
+    border-bottom: 1px solid #707070;
+    margin-bottom: 100px;
+  }
+
+  &__home {
+    margin-top: 80px;
+
+    a {
+      @include btn--primary;
+    }
+  }
+}

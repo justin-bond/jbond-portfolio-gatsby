@@ -3,6 +3,7 @@
   'plugins': ['react'],
   'rules': {
     'indent': ['error', 2],
+    "operator-linebreak": [2, "before", { "overrides": { "?": "after", "&&": "after" } }],
     'comma-dangle': [
       'error',
       {

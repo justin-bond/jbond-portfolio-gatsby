@@ -141,7 +141,7 @@ const Contact = () => {
             </label>
           </div>
           <div className={`${ns}--form__submit`}>
-            <button type={'submit'} className={'btn--primary'}>
+            <button type={'submit'}>
               Submit Message
             </button>
           </div>
