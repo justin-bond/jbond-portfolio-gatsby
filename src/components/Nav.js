@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
+import { animateScroll } from 'react-scroll';
 
 import AnchorLink from './AnchorLink';
 
@@ -21,6 +22,13 @@ const Nav = () => {
     setNavState((prevState) => {
       return { ...prevState, scrollPosition: scroll };
     });
+  };
+
+  const scrollTo = (anchor) => {
+    if (document.getElementById(anchor) != null) {
+      const anchorPosition = document.getElementById(anchor).getBoundingClientRect();
+      animateScroll.scrollTo(anchorPosition.top + window.scrollY);
+    }
   };
 
   useEffect(() => {
@@ -45,9 +53,8 @@ const Nav = () => {
       <div className={`${ns}__wrapper`}>
         <nav className={`${ns}__navigation`}>
           <ul>
-            <li><AnchorLink to={'/'} className={'link__underline'}>Home</AnchorLink></li>
-            <li><AnchorLink to={'/#work'} className={'link__underline'}>Work</AnchorLink></li>
-            <li><AnchorLink to={'#contact'} className={'link__underline'}>Contact</AnchorLink></li>
+            <li><AnchorLink to={'/'}>Home</AnchorLink></li>
+            <li><a href={'#contact'} onClick={() => { scrollTo('contact'); }}>Contact</a></li>
           </ul>
         </nav>
       </div>

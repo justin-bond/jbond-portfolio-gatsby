@@ -22,11 +22,6 @@ const DefaultLayout = (props) => {
 
   library.add(fab);
 
-  if (typeof window !== 'undefined') {
-    // eslint-disable-next-line global-require
-    require('smooth-scroll')('a[href*="#"]');
-  }
-
   return (
     <div className={rootClassnames}>
       <Helmet defaultTitle={'Justin Bond'} titleTemplate={'%s | Justin Bond'}>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { animateScroll } from 'react-scroll';
 
 import AnchorLink from './AnchorLink';
 
@@ -9,12 +10,22 @@ const ns = `${nsBase}-home-recent-work`;
 
 const HomeRecentWork = (props) => {
   const {
-    recentProjects
+    recentProjects,
+    location
   } = props;
 
   const rootClassnames = classNames({
     [`${nsBase} ${ns}`]: true
   });
+
+  useEffect(() => {
+    const hash = location.hash.replace('#', '');
+
+    if (hash === 'work') {
+      const anchorPosition = document.getElementById(hash).getBoundingClientRect();
+      animateScroll.scrollTo(anchorPosition.top + window.scrollY);
+    }
+  }, []);
 
   const renderRecentWork = (key) => {
     const work = key.node;
@@ -23,7 +34,7 @@ const HomeRecentWork = (props) => {
     };
 
     return (
-      <div className={`${ns}__item`} key={work.slug}>
+      <div className={`${ns}__item`} key={work.slug} id={'work'}>
         <AnchorLink to={`/project/${work.slug}`}>
           <div className={`${ns}__item--logo`}>
             <img src={work.logo} alt={'company_logo'} />
@@ -37,7 +48,7 @@ const HomeRecentWork = (props) => {
   };
 
   return (
-    <div className={rootClassnames}>
+    <div id={'work'} className={rootClassnames}>
       <h1 className={`${ns}__text`}>
         Recent Work
       </h1>
@@ -49,11 +60,13 @@ const HomeRecentWork = (props) => {
 };
 
 HomeRecentWork.propTypes = {
-  recentProjects: PropTypes.arrayOf(PropTypes.shape({}))
+  recentProjects: PropTypes.arrayOf(PropTypes.shape({})),
+  location: PropTypes.shape({})
 };
 
 HomeRecentWork.defaultProps = {
-  recentProjects: null
+  recentProjects: null,
+  location: null
 };
 
 export default HomeRecentWork;

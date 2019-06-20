@@ -8,7 +8,7 @@ import HomeIntro from '../components/HomeIntro';
 import HomeRecentWork from '../components/HomeRecentWork';
 import HomeOtherWork from '../components/HomeOtherWork';
 
-const Index = ({ data }) => {
+const Index = ({ data, location }) => {
   const {
     recentProjects,
     otherProjects
@@ -17,8 +17,7 @@ const Index = ({ data }) => {
   return (
     <Container size={'small'}>
       <HomeIntro />
-      <div id={'work'} />
-      <HomeRecentWork recentProjects={recentProjects.edges} />
+      <HomeRecentWork recentProjects={recentProjects.edges} location={location} />
       <HomeOtherWork otherProjects={otherProjects.edges} />
       <Contact />
     </Container>
@@ -26,6 +25,7 @@ const Index = ({ data }) => {
 };
 
 Index.propTypes = {
+  location: PropTypes.shape({}),
   data: PropTypes.shape({
     recentProjects: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.shape({
@@ -49,6 +49,7 @@ Index.propTypes = {
 };
 
 Index.defaultProps = {
+  location: null,
   data: {
     recentProjects: {
       edges: {
