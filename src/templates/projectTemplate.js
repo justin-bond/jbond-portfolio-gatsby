@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
 import Contact from '../components/Contact';
+import Container from '../components/Container';
 
 const nsBase = 'template';
 const ns = `${nsBase}-project`;
@@ -22,10 +23,12 @@ const projectTemplate = ({ data }) => {
       <Helmet>
         <title>{project.title}</title>
       </Helmet>
-      <div className={`${ns}__project`}>
-        {project.title}
-      </div>
-      <Contact />
+      <Container size={'small'}>
+        <div className={`${ns}__project`}>
+          {project.title}
+        </div>
+        <Contact />
+      </Container>
     </div>
   );
 };

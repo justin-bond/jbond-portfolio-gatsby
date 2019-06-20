@@ -53,6 +53,10 @@ $ns: '.component-home-recent-work';
     align-items: center;
 
     @include at-tablet {
+      height: 225px;
+    }
+
+    @include at-laptop {
       height: 350px;
     }
   }
@@ -73,7 +77,8 @@ $ns: '.component-home-recent-work';
     background-size: cover;
     box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.7);
     font-size: 3em;
-    color: #FFF;
+    color: solid-color('white');
+    text-align: center;
     position: absolute;
     top: 0;
     left: 0;

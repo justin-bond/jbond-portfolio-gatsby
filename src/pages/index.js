@@ -15,14 +15,13 @@ const Index = ({ data }) => {
   } = data;
 
   return (
-    <div>
-      <Container size={'small'}>
-        <HomeIntro />
-        <HomeRecentWork recentProjects={recentProjects.edges} />
-        <HomeOtherWork otherProjects={otherProjects.edges} />
-        <Contact />
-      </Container>
-    </div>
+    <Container size={'small'}>
+      <HomeIntro />
+      <div id={'work'} />
+      <HomeRecentWork recentProjects={recentProjects.edges} />
+      <HomeOtherWork otherProjects={otherProjects.edges} />
+      <Contact />
+    </Container>
   );
 };
 
