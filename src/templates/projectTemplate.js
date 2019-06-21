@@ -12,6 +12,7 @@ import ProjectTitle from '../components/ProjectTitle';
 import ProjectExternalLink from '../components/ProjectExternalLink';
 import ProjectSkills from '../components/ProjectSkills';
 import ProjectAgency from '../components/ProjectAgency';
+import Reveal from '../components/Reveal';
 
 const nsBase = 'template';
 const ns = `${nsBase}-project`;
@@ -31,22 +32,42 @@ const projectTemplate = ({ data }) => {
       </Helmet>
       <Container size={'small'}>
         <div className={`${ns}__container`}>
-          <ProjectHero project={project} />
-          <ProjectTitle title={project.title} />
+          <Reveal>
+            <ProjectHero project={project} />
+          </Reveal>
+          <Reveal>
+            <ProjectTitle title={project.title} />
+          </Reveal>
           {project.link &&
-            <ProjectExternalLink externalLink={project.link} />
+            (
+              <Reveal>
+                <ProjectExternalLink externalLink={project.link} />
+              </Reveal>
+            )
           }
           {project.skills &&
-            <ProjectSkills skills={project.skills} />
+            (
+              <Reveal>
+                <ProjectSkills skills={project.skills} />
+              </Reveal>
+            )
           }
           {project.agency &&
-            <ProjectAgency agency={project.agency} />
+            (
+              <Reveal>
+                <ProjectAgency agency={project.agency} />
+              </Reveal>
+            )
           }
-          <div className={`${ns}__home`}>
-            <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
-          </div>
+          <Reveal>
+            <div className={`${ns}__home`}>
+              <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
+            </div>
+          </Reveal>
         </div>
-        <Contact />
+        <Reveal>
+          <Contact />
+        </Reveal>
       </Container>
     </div>
   );

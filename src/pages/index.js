@@ -7,6 +7,7 @@ import Container from '../components/Container';
 import HomeIntro from '../components/HomeIntro';
 import HomeRecentWork from '../components/HomeRecentWork';
 import HomeOtherWork from '../components/HomeOtherWork';
+import Reveal from '../components/Reveal';
 
 const Index = ({ data, location }) => {
   const {
@@ -17,9 +18,15 @@ const Index = ({ data, location }) => {
   return (
     <Container size={'small'}>
       <HomeIntro />
-      <HomeRecentWork recentProjects={recentProjects.edges} location={location} />
-      <HomeOtherWork otherProjects={otherProjects.edges} />
-      <Contact />
+      <Reveal>
+        <HomeRecentWork recentProjects={recentProjects.edges} location={location} />
+      </Reveal>
+      <Reveal>
+        <HomeOtherWork otherProjects={otherProjects.edges} />
+      </Reveal>
+      <Reveal>
+        <Contact />
+      </Reveal>
     </Container>
   );
 };

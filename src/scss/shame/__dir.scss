@@ -6,6 +6,10 @@
 */
 
 // transition link override
+.tl-edges {
+  overflow-x: inherit;
+}
+
 .tl-wrapper-status--entering {
   + .tl-wrapper-status--exiting {
     opacity: 0 !important;
