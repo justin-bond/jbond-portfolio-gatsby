@@ -59,6 +59,7 @@ projectTemplate.propTypes = {
       slug: PropTypes.string,
       agency: PropTypes.string,
       screentshot: PropTypes.string,
+      video: PropTypes.string,
       link: PropTypes.string,
       skills: PropTypes.arrayOf(PropTypes.shape({}))
     }),
@@ -76,6 +77,7 @@ export const query = graphql`
       slug
       agency
       screenshot
+      video
       link
       skills {
         skill
