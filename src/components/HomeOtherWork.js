@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { TweenMax } from 'gsap';
+import { Waypoint } from 'react-waypoint';
 
 import AnchorLink from './AnchorLink';
 
@@ -16,26 +18,39 @@ const HomeOtherWork = (props) => {
     [`${nsBase} ${ns}`]: true
   });
 
+  const homeOtherWorkBullets = [];
   const bullet = '//';
 
-  const renderOtherWork = (key) => {
+  const handleReveal = () => {
+    TweenMax.staggerFrom(homeOtherWorkBullets, 1, {
+      opacity: 0, x: 75, stagger: 0.2
+    });
+  };
+
+  const renderOtherWork = (key, index) => {
     const work = key.node;
 
     return (
-      <li key={work.slug}><AnchorLink to={`/project/${work.slug}`} className={'code-color-blue'}>{ work.title }</AnchorLink></li>
+      <li key={work.slug} ref={(node) => { homeOtherWorkBullets[index] = node; }}>
+        <AnchorLink to={`/project/${work.slug}`} className={'code-color-blue'}>
+          { work.title }
+        </AnchorLink>
+      </li>
     );
   };
 
   return (
-    <div className={rootClassnames}>
-      <div className={`${ns}__text`}>
-        <span>{bullet}</span>
-        {` Other Work`}
+    <Waypoint scrollableAncestor={window} onEnter={handleReveal} bottomOffset={'100px'}>
+      <div className={rootClassnames}>
+        <div className={`${ns}__text`}>
+          <span>{bullet}</span>
+          {` Other Work`}
+        </div>
+        <ul className={`${ns}__items`}>
+          {otherProjects.map(renderOtherWork)}
+        </ul>
       </div>
-      <ul className={`${ns}__items`}>
-        {otherProjects.map(renderOtherWork)}
-      </ul>
-    </div>
+    </Waypoint>
   );
 };
 
