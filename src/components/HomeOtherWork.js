@@ -27,6 +27,13 @@ const HomeOtherWork = (props) => {
     });
   };
 
+  const setScrollableAncestor = () => {
+    if (typeof document !== `undefined`) {
+      return window;
+    }
+    return null;
+  };
+
   const renderOtherWork = (key, index) => {
     const work = key.node;
 
@@ -40,7 +47,7 @@ const HomeOtherWork = (props) => {
   };
 
   return (
-    <Waypoint scrollableAncestor={window} onEnter={handleReveal} bottomOffset={'100px'}>
+    <Waypoint scrollableAncestor={setScrollableAncestor()} onEnter={handleReveal} bottomOffset={'100px'}>
       <div className={rootClassnames}>
         <div className={`${ns}__text`}>
           <span>{bullet}</span>

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { animateScroll } from 'react-scroll';
 
 import AnchorLink from './AnchorLink';
+import Reveal from './Reveal';
 
 const nsBase = 'component';
 const ns = `${nsBase}-home-recent-work`;
@@ -34,16 +35,18 @@ const HomeRecentWork = (props) => {
     };
 
     return (
-      <div className={`${ns}__item`} key={work.slug} id={'work'}>
-        <AnchorLink to={`/project/${work.slug}`}>
-          <div className={`${ns}__item--logo`}>
-            <img src={work.logo} alt={'company_logo'} />
-          </div>
-          <div className={`${ns}__item--hover`} style={sectionStyle}>
-            { work.title }
-          </div>
-        </AnchorLink>
-      </div>
+      <Reveal>
+        <div className={`${ns}__item`} key={work.slug} id={'work'}>
+          <AnchorLink to={`/project/${work.slug}`}>
+            <div className={`${ns}__item--logo`}>
+              <img src={work.logo} alt={'company_logo'} />
+            </div>
+            <div className={`${ns}__item--hover`} style={sectionStyle}>
+              { work.title }
+            </div>
+          </AnchorLink>
+        </div>
+      </Reveal>
     );
   };
 

@@ -22,8 +22,15 @@ const Container = (props) => {
     setRevealState(!revealState);
   };
 
+  const setScrollableAncestor = () => {
+    if (typeof document !== `undefined`) {
+      return window;
+    }
+    return null;
+  };
+
   return (
-    <Waypoint scrollableAncestor={window} onEnter={handleReveal} onLeave={handleReveal} bottomOffset={bottomOffset}>
+    <Waypoint scrollableAncestor={setScrollableAncestor()} onEnter={handleReveal} onLeave={handleReveal} bottomOffset={bottomOffset}>
       <div className={rootClassnames} data-reveal={revealState}>
         {children}
       </div>
