@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { TweenMax } from 'gsap';
@@ -20,11 +20,15 @@ const HomeOtherWork = (props) => {
 
   const homeOtherWorkBullets = [];
   const bullet = '//';
+  const [staggered, setStaggered] = useState(false);
 
   const handleReveal = () => {
-    TweenMax.staggerFrom(homeOtherWorkBullets, 1, {
-      opacity: 0, x: 75, stagger: 0.2
-    });
+    if (!staggered) {
+      TweenMax.staggerFrom(homeOtherWorkBullets, 1, {
+        opacity: 0, x: 75, stagger: 0.2
+      });
+      setStaggered(true);
+    }
   };
 
   const setScrollableAncestor = () => {

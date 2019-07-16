@@ -22,7 +22,7 @@ const HomeRecentWork = (props) => {
   useEffect(() => {
     const hash = location.hash.replace('#', '');
 
-    if (hash === 'work') {
+    if (hash === 'recent-work') {
       const anchorPosition = document.getElementById(hash).getBoundingClientRect();
       animateScroll.scrollTo(anchorPosition.top + window.scrollY);
     }
@@ -35,8 +35,8 @@ const HomeRecentWork = (props) => {
     };
 
     return (
-      <Reveal>
-        <div className={`${ns}__item`} key={work.slug} id={'work'}>
+      <Reveal key={work.slug}>
+        <div className={`${ns}__item`}>
           <AnchorLink to={`/project/${work.slug}`}>
             <div className={`${ns}__item--logo`}>
               <img src={work.logo} alt={'company_logo'} />
@@ -51,7 +51,7 @@ const HomeRecentWork = (props) => {
   };
 
   return (
-    <div id={'work'} className={rootClassnames}>
+    <div id={'recent-work'} className={rootClassnames}>
       <h1 className={`${ns}__text`}>
         Recent Work
       </h1>
