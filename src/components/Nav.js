@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classNames from 'classnames';
 import { animateScroll } from 'react-scroll';
+import { Link } from 'gatsby';
 
 import AnchorLink from './AnchorLink';
 
@@ -54,6 +55,7 @@ const Nav = () => {
         <nav className={`${ns}__navigation`}>
           <ul>
             <li><AnchorLink to={'/'}>Home</AnchorLink></li>
+            <li><Link to={'/#recent-work'} onClick={() => { scrollTo('recent-work'); }}>Work</Link></li>
             <li><a href={'#contact'} onClick={() => { scrollTo('contact'); }}>Contact</a></li>
           </ul>
         </nav>
