@@ -40,6 +40,19 @@ const DefaultLayout = (props) => {
         {children}
       </div>
       <Footer />
+      <div
+        id={'overlay'}
+        style={{
+          position: 'fixed',
+          zIndex: 9999,
+          top: 0,
+          left: 0,
+          backgroundColor: '#191919',
+          width: '100vw',
+          height: '100vh',
+          transform: 'translateX(-100%)'
+        }}
+      />
     </div>
   );
 };

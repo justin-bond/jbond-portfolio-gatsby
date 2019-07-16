@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import AniLink from 'gatsby-plugin-transition-link/AniLink';
+import TransitionLink from 'gatsby-plugin-transition-link';
+import { TimelineMax, Power1 } from 'gsap';
 
 const nsBase = 'component';
 const ns = `${nsBase}-link`;
@@ -39,6 +40,22 @@ const AnchorLink = (props) => {
     targetOption = '_blank';
   }
 
+  const horizontalAnimation = ({ length }) => {
+    const directionTo = direction === 'left' ? '-100%' : '100%';
+    const directionFrom = direction === 'left' ? '100%' : '-100%';
+
+    return new TimelineMax()
+      .set(document.getElementById('overlay'), { x: directionFrom })
+      .to(document.getElementById('overlay'), length / 2, {
+        x: '0%',
+        ease: Power1.easeInOut,
+      })
+      .to(document.getElementById('overlay'), length / 2, {
+        x: directionTo,
+        ease: Power1.easeIn,
+      });
+  };
+
   if (isExternalUrl()) {
     RenderedAnchorLink = (
       <a className={rootClassnames} href={to} target={targetOption} aria-label={'external link'} rel={'noopener noreferrer'}>
@@ -53,16 +70,20 @@ const AnchorLink = (props) => {
     );
   } else {
     RenderedAnchorLink = (
-      <AniLink
+      <TransitionLink
         className={rootClassnames}
         to={to}
-        cover
-        bg={'#191919'}
-        direction={direction}
-        duration={1}
+        exit={{
+          length: 1,
+          trigger: ({ exit }) => { horizontalAnimation(exit); },
+          state: { test: 'exit state' },
+        }}
+        entry={{
+          delay: 0.5
+        }}
       >
         {children}
-      </AniLink>
+      </TransitionLink>
     );
   }
 
