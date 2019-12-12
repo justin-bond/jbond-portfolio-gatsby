@@ -60,6 +60,56 @@
     ]
   },
   {
+    "title": "Bond Wedding",
+    "slug": "bond-wedding",
+    "projectOptions": "otherWork",
+    "logo": "",
+    "screenshot": "/assets/screenshots/BondWedding.jpg",
+    "link": "https://aileen.justin-bond.com/",
+    "skills": [
+      { "skill": "React Website" }
+    ]
+  },
+  {
+    "title": "Arlo CES 2019",
+    "slug": "arlo-ces-2019",
+    "projectOptions": "otherWork",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/assets/screenshots/ArloCES.gif",
+    "link": "",
+    "skills": [
+      { "skill": "React Microsite" }
+    ]
+  },
+  {
+    "title": "Vizio - TVP",
+    "slug": "vizio-tvp",
+    "projectOptions": "otherWork",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/assets/screenshots/TVP.jpg",
+    "link": "https://tvp.vizio.com/",
+    "skills": [
+      { "skill": "Custom Static Website" },
+      { "skill": "HTML\/CSS\/jQuery\/Swig" }
+    ]
+  },
+  {
+    "title": "Vanity Planet",
+    "slug": "vanity-planet",
+    "projectOptions": "otherWork",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/assets/screenshots/VanityPlanet.jpg",
+    "link": "https://www.vanityplanet.com/",
+    "skills": [
+      { "skill": "Shopify Website" },
+      { "skill": "Customized Shopify Prestige Theme" },
+      { "skill": "HTML\/CSS\/jQuery\/Liquid" }
+    ]
+  },
+  {
     "title": "Mastercraft",
     "slug": "mastercraft",
     "projectOptions": "otherWork",
@@ -212,56 +262,6 @@
     "skills": [
       { "skill": "Wordpress Website" },
       { "skill": "Enfold Gym Theme" }
-    ]
-  },
-  {
-    "title": "Arlo CES 2019",
-    "slug": "arlo-ces-2019",
-    "projectOptions": "otherWork",
-    "agency": "Envoy",
-    "logo": "",
-    "screenshot": "/assets/screenshots/ArloCES.gif",
-    "link": "",
-    "skills": [
-      { "skill": "React Microsite" }
-    ]
-  },
-  {
-    "title": "Vizio - TVP",
-    "slug": "vizio-tvp",
-    "projectOptions": "otherWork",
-    "agency": "Envoy",
-    "logo": "",
-    "screenshot": "/assets/screenshots/TVP.jpg",
-    "link": "https://tvp.vizio.com/",
-    "skills": [
-      { "skill": "Custom Static Website" },
-      { "skill": "HTML\/CSS\/jQuery\/Swig" }
-    ]
-  },
-  {
-    "title": "Vanity Planet",
-    "slug": "vanity-planet",
-    "projectOptions": "otherWork",
-    "agency": "Envoy",
-    "logo": "",
-    "screenshot": "/assets/screenshots/VanityPlanet.jpg",
-    "link": "https://www.vanityplanet.com/",
-    "skills": [
-      { "skill": "Shopify Website" },
-      { "skill": "Customized Shopify Prestige Theme" },
-      { "skill": "HTML\/CSS\/jQuery\/Liquid" }
-    ]
-  },
-  {
-    "title": "Bond Wedding",
-    "slug": "bond-wedding",
-    "projectOptions": "otherWork",
-    "logo": "",
-    "screenshot": "/assets/screenshots/BondWedding.jpg",
-    "link": "https://aileen.justin-bond.com/",
-    "skills": [
-      { "skill": "React Website" }
     ]
   }
 ]
