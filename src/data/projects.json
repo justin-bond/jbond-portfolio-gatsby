@@ -240,7 +240,7 @@
     ]
   },
   {
-    "title": "Vanity planet",
+    "title": "Vanity Planet",
     "slug": "vanity-planet",
     "projectOptions": "otherWork",
     "agency": "Envoy",
@@ -251,6 +251,17 @@
       { "skill": "Shopify Website" },
       { "skill": "Customized Shopify Prestige Theme" },
       { "skill": "HTML\/CSS\/jQuery\/Liquid" }
+    ]
+  },
+  {
+    "title": "Bond Wedding",
+    "slug": "bond-wedding",
+    "projectOptions": "otherWork",
+    "logo": "",
+    "screenshot": "/assets/screenshots/BondWedding.jpg",
+    "link": "https://aileen.justin-bond.com/",
+    "skills": [
+      { "skill": "React Website" }
     ]
   }
 ]
