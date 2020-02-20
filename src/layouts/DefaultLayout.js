@@ -33,7 +33,10 @@ const DefaultLayout = (props) => {
     <div className={rootClassnames} ref={(node) => { defaultLayout = node; }}>
       <Helmet defaultTitle={'Justin Bond'} titleTemplate={'%s | Justin Bond'}>
         <html lang={'en'} />
-        <meta name={'description'} content={'Hello, I‘m Justin Bond and I am a full-stack web developer from Costa Mesa, California.'} />
+        <meta
+          name={'description'}
+          content={'Hello, I‘m Justin Bond and I am a full-stack web developer from Costa Mesa, California.'}
+        />
       </Helmet>
       <Header />
       <div className={`${ns}__content`}>

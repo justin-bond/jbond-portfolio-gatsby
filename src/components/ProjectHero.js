@@ -31,7 +31,14 @@ const ProjectHero = ({ project }) => {
       return (
         <div className={`${ns}__video`}>
           <div className={`${ns}__video-container video-aspect`}>
-            <iframe src={`https://player.vimeo.com/video/${project.video}?autoplay=1&title=0&byline=0&portrait=0`} width={'640'} height={'360'} frameBorder={'0'} title={'video'} allowFullScreen />
+            <iframe
+              src={`https://player.vimeo.com/video/${project.video}?autoplay=1&title=0&byline=0&portrait=0`}
+              width={'640'}
+              height={'360'}
+              frameBorder={'0'}
+              title={'video'}
+              allowFullScreen
+            />
             <button className={`${ns}__video-link close`} type={'button'} onClick={hideShowVideo}>
               Exit Video
             </button>
@@ -48,7 +55,11 @@ const ProjectHero = ({ project }) => {
             <div className={`${ns}__video-title`}>
               Website Overview
             </div>
-            <button className={`${ns}__video-link open`} type={'button'} onClick={hideShowVideo}>
+            <button
+              className={`${ns}__video-link open`}
+              type={'button'}
+              onClick={hideShowVideo}
+            >
               Click to Play
             </button>
           </div>

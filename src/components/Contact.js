@@ -109,35 +109,67 @@ const Contact = () => {
         <div className={`${ns}--form__title`}>
           Lets Talk
         </div>
-        <form className={`${ns}--form ${formShow}`} onSubmit={(e) => { submitForm(e); }}>
+        <form
+          className={`${ns}--form ${formShow}`}
+          onSubmit={(e) => { submitForm(e); }}
+        >
           <div className={`${ns}--form__name`}>
             <label htmlFor={'name'}>
               Your Name*
-              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formName'} id={'name'} required />
+              <input
+                onChange={(e) => { handleChange(e); }}
+                type={'text'}
+                name={'formName'}
+                id={'name'}
+                required
+              />
             </label>
           </div>
           <div className={`${ns}--form__email`}>
             <label htmlFor={'email'}>
               Email Address*
-              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formEmail'} id={'email'} required />
+              <input
+                onChange={(e) => { handleChange(e); }}
+                type={'text'}
+                name={'formEmail'}
+                id={'email'}
+                required
+              />
             </label>
           </div>
           <div className={`${ns}--form__phone`}>
             <label htmlFor={'phone'}>
               Phone*
-              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formPhone'} id={'phone'} required />
+              <input
+                onChange={(e) => { handleChange(e); }}
+                type={'text'}
+                name={'formPhone'}
+                id={'phone'}
+                required
+              />
             </label>
           </div>
           <div className={`${ns}--form__company`}>
             <label htmlFor={'company'}>
               Company
-              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formCompany'} id={'company'} />
+              <input
+                onChange={(e) => { handleChange(e); }}
+                type={'text'}
+                name={'formCompany'}
+                id={'company'}
+              />
             </label>
           </div>
           <div className={`${ns}--form__message`}>
             <label htmlFor={'message'}>
               Message*
-              <input onChange={(e) => { handleChange(e); }} type={'text'} name={'formMessage'} id={'message'} required />
+              <input
+                onChange={(e) => { handleChange(e); }}
+                type={'text'}
+                name={'formMessage'}
+                id={'message'}
+                required
+              />
             </label>
           </div>
           <div className={`${ns}--form__submit`}>

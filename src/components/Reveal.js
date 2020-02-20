@@ -30,7 +30,12 @@ const Container = (props) => {
   };
 
   return (
-    <Waypoint scrollableAncestor={setScrollableAncestor()} onEnter={handleReveal} onLeave={handleReveal} bottomOffset={bottomOffset}>
+    <Waypoint
+      scrollableAncestor={setScrollableAncestor()}
+      onEnter={handleReveal}
+      onLeave={handleReveal}
+      bottomOffset={bottomOffset}
+    >
       <div className={rootClassnames} data-reveal={revealState}>
         {children}
       </div>

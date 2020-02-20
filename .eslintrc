@@ -2,6 +2,7 @@
   'extends': 'airbnb',
   'plugins': ['react'],
   'rules': {
+    'no-unused-vars': 1,
     'indent': ['error', 2],
     "operator-linebreak": [2, "before", { "overrides": { "?": "after", "&&": "after" } }],
     'comma-dangle': [
@@ -15,10 +16,12 @@
       },
     ],
     'arrow-body-style': ['error', 'always'],
+    'import/no-extraneous-dependencies': [0],
+    'no-underscore-dangle': [2, { 'allow': ['_gotcha'] }],
 
     // options to emulate prettier setup
     'semi': ['error', 'always'],
-    'max-len': ['error', { code: 160, 'ignoreUrls': true }], // was 80
+    'max-len': ['error', { code: 160, 'ignoreUrls': true }],
     'template-curly-spacing': 0,
     'arrow-parens': ['error', 'always'],
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
@@ -28,6 +31,10 @@
     'react/jsx-uses-vars': 'error',
     'react/jsx-filename-extension': [1, { 'extensions': ['.js'] }], // use only .js files
     'react/jsx-curly-brace-presence': [1, { 'props': 'always', 'children': 'never' }],
+    'react/jsx-props-no-spreading': [2, {
+      'html': 'enforce',
+      'custom': 'enforce'
+    }],
   },
   'globals': {
     'window': true,

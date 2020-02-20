@@ -26,7 +26,10 @@ const AnchorLink = (props) => {
   const isExternalUrl = () => {
     let isExternal = false;
 
-    if (to && (to.includes('//') || to.match(/((^(mailto|tel|sms|mms):)|www.)/))) {
+    if (
+      to && (to.includes('//')
+      || to.match(/((^(mailto|tel|sms|mms):)|www.)/))
+    ) {
       isExternal = true;
     }
 
@@ -58,7 +61,13 @@ const AnchorLink = (props) => {
 
   if (isExternalUrl()) {
     RenderedAnchorLink = (
-      <a className={rootClassnames} href={to} target={targetOption} aria-label={'external link'} rel={'noopener noreferrer'}>
+      <a
+        className={rootClassnames}
+        href={to}
+        target={targetOption}
+        aria-label={'external link'}
+        rel={'noopener noreferrer'}
+      >
         {children}
       </a>
     );

@@ -42,7 +42,10 @@ const HomeOtherWork = (props) => {
     const work = key.node;
 
     return (
-      <li key={work.slug} ref={(node) => { homeOtherWorkBullets[index] = node; }}>
+      <li
+        key={work.slug}
+        ref={(node) => { homeOtherWorkBullets[index] = node; }}
+      >
         <AnchorLink to={`/project/${work.slug}`} className={'code-color-blue'}>
           { work.title }
         </AnchorLink>
@@ -51,7 +54,11 @@ const HomeOtherWork = (props) => {
   };
 
   return (
-    <Waypoint scrollableAncestor={setScrollableAncestor()} onEnter={handleReveal} bottomOffset={'100px'}>
+    <Waypoint
+      scrollableAncestor={setScrollableAncestor()}
+      onEnter={handleReveal}
+      bottomOffset={'100px'}
+    >
       <div className={rootClassnames}>
         <div className={`${ns}__text`}>
           <span>{bullet}</span>

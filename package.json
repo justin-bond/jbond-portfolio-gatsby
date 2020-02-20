@@ -49,6 +49,7 @@
     "gatsby-plugin-eslint": "^2.0.5",
     "stylelint": "^10.1.0",
     "stylelint-config-airbnb": "0.0.0",
+    "stylelint-no-unsupported-browser-features": "^4.0.0",
     "stylelint-order": "^3.0.0",
     "stylelint-scss": "^3.8.0"
   }

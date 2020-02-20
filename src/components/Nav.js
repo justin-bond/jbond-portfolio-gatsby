@@ -50,13 +50,22 @@ const Nav = () => {
   const menuActive = navState.menuActive ? 'active' : '';
 
   return (
-    <div id={'site-menu'} className={`${rootClassnames} ${scrolled} ${menuActive}`}>
+    <div
+      id={'site-menu'}
+      className={`${rootClassnames} ${scrolled} ${menuActive}`}
+    >
       <div className={`${ns}__wrapper`}>
         <nav className={`${ns}__navigation`}>
           <ul>
-            <li><AnchorLink to={'/'}>Home</AnchorLink></li>
-            <li><Link to={'/#recent-work'} onClick={() => { scrollTo('recent-work'); }}>Work</Link></li>
-            <li><a href={'#contact'} onClick={() => { scrollTo('contact'); }}>Contact</a></li>
+            <li>
+              <AnchorLink to={'/'}>Home</AnchorLink>
+            </li>
+            <li>
+              <Link to={'/#recent-work'} onClick={() => { scrollTo('recent-work'); }}>Work</Link>
+            </li>
+            <li>
+              <a href={'#contact'} onClick={() => { scrollTo('contact'); }}>Contact</a>
+            </li>
           </ul>
         </nav>
       </div>
