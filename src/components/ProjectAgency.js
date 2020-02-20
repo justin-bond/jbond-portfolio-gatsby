@@ -7,7 +7,7 @@ const ns = `${nsBase}-project-agency`;
 
 const ProjectAgency = ({ agency }) => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   return (

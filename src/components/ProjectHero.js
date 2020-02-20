@@ -7,7 +7,7 @@ const ns = `${nsBase}-project-hero`;
 
 const ProjectHero = ({ project }) => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   const [projectHeroState, setProjectHeroState] = useState({

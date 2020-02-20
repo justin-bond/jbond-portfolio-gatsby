@@ -9,7 +9,7 @@ const ns = `${nsBase}-project-external-link`;
 
 const ProjectExternalLink = ({ externalLink }) => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   return (

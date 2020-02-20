@@ -7,7 +7,7 @@ const ns = `${nsBase}-project-skills`;
 
 const ProjectSkills = ({ skills }) => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   const renderSkills = (key) => {

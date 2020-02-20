@@ -13,7 +13,7 @@ const Container = (props) => {
   } = props;
 
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   const [revealState, setRevealState] = useState(false);

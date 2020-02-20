@@ -9,7 +9,7 @@ const ns = `${nsBase}-contact`;
 
 const Contact = () => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true,
+    [`${ns}`]: true,
   });
 
   const [contactState, setContactState] = useState({

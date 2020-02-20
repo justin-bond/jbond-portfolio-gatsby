@@ -7,7 +7,7 @@ const ns = `${nsBase}-project-title`;
 
 const ProjectTitle = ({ title }) => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   return (

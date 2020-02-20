@@ -16,7 +16,7 @@ const HomeRecentWork = (props) => {
   } = props;
 
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   useEffect(() => {

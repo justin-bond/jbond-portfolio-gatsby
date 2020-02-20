@@ -10,7 +10,7 @@ const ns = `${nsBase}-nav`;
 
 const Nav = () => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true,
+    [`${ns}`]: true,
   });
 
   const [navState, setNavState] = useState({

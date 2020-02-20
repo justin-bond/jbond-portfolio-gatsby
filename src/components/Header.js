@@ -12,7 +12,7 @@ const ns = `${nsBase}-header`;
 
 const Header = () => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true,
+    [`${ns}`]: true,
   });
 
   return (

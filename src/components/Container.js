@@ -12,7 +12,7 @@ const Container = (props) => {
   } = props;
 
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true,
+    [`${ns}`]: true,
     [`${size}`]: size
   });
 

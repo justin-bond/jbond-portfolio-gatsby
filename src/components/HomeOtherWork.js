@@ -15,7 +15,7 @@ const HomeOtherWork = (props) => {
   } = props;
 
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   const homeOtherWorkBullets = [];

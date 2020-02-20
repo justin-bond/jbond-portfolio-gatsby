@@ -10,7 +10,7 @@ const ns = `${nsBase}-link`;
 
 const AnchorLink = (props) => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   const {

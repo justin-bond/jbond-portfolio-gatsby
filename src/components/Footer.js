@@ -8,7 +8,7 @@ const ns = `${nsBase}-footer`;
 
 const Footer = () => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true,
+    [`${ns}`]: true,
   });
   const date = (new Date()).getFullYear();
 

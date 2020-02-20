@@ -7,7 +7,7 @@ const ns = `${nsBase}-home-intro`;
 
 const HomeIntro = () => {
   const rootClassnames = classNames({
-    [`${nsBase} ${ns}`]: true
+    [`${ns}`]: true
   });
 
   let homeIntroText = null;
