@@ -29,7 +29,7 @@ $ns: '.component-contact';
     transition: all 1s ease-in-out;
     max-height: 1000px;
     opacity: 1;
-    
+
     @include at-tablet {
       display: grid;
       grid-template-columns: 1fr 1fr;

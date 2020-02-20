@@ -7,5 +7,9 @@
     'rule-empty-line-before': ['always', { 'except': ['first-nested'], 'ignore': ['after-comment'] }],
     'max-nesting-depth': [5, { 'ignoreAtRules': ['include'] }],
     'number-leading-zero': 'always',
+    'no-eol-whitespace': true,
+    'no-missing-end-of-source-newline': true,
+    'max-empty-lines': 1,
+    'selector-max-id': 3,
   }
 }

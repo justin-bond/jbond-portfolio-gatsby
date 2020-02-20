@@ -35,7 +35,7 @@ $ns: '.component-nav';
 
       &.active {
         max-width: 350px;
-        
+
         #{$ns}__wrapper {
           opacity: 1;
           transform: translateX(-40%);
@@ -52,7 +52,6 @@ $ns: '.component-nav';
       transform: translateX(0%);
     }
   }
-
 
   &__control {
     position: absolute;
@@ -96,7 +95,7 @@ $ns: '.component-nav';
     li {
       margin-right: 25px;
       @include link-underline;
-      
+
       @include at-tablet {
         margin-right: 75px;
       }

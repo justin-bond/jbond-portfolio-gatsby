@@ -13,7 +13,7 @@ $ns: '.component-project-hero';
       &:hover {
         &.image:after {
           visibility: visible;
-          opacity: 1;  
+          opacity: 1;
         }
 
         #{$ns}__video-content {
