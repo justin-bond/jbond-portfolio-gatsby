@@ -13,7 +13,9 @@ const rootClassnames = classNames({
 
 class error404 extends Component {
   componentDidMount() {
-    this.spaceInvaders();
+    if (window.innerWidth > 1024) {
+      this.spaceInvaders();
+    }
   }
 
   spaceInvaders() {
@@ -461,11 +463,13 @@ class error404 extends Component {
       <div className={rootClassnames}>
         <Container>
           <h1>404</h1>
-          <h4
-            dangerouslySetInnerHTML={{ __html: `Space Invadors destroyed this page! Take revenge on them! <br /><br />Use <span class='label'>Space</span> to shoot and <span class='label'>←</span> <span class='label'>→</span> to move!` }} // eslint-disable-line
-          />
-          <canvas id={`space-invaders`} />
-          <button id={`restart`}>Restart</button>
+          <div className={`${ns}__invaders`}>
+            <h4
+              dangerouslySetInnerHTML={{ __html: `Space Invadors destroyed this page! Take revenge on them! <br /><br />Use <span class='label'>Space</span> to shoot and <span class='label'>←</span> <span class='label'>→</span> to move!` }} // eslint-disable-line
+            />
+            <canvas id={`space-invaders`} />
+            <button id={`restart`}>Restart</button>
+          </div>
         </Container>
       </div>
     );

@@ -5,6 +5,11 @@ $ns: '.page-404';
 #{$ns} {
   margin-bottom: 100px;
   text-align: center;
+  min-height: 45vh;
+
+  @media only screen and (min-width: 1025px) {
+    min-height: inherit;
+  }
 
   #space-invaders {
     margin: 0 auto 50px;
@@ -16,6 +21,14 @@ $ns: '.page-404';
   h1,
   h4 {
     margin-bottom: 2em;
+  }
+
+  &__invaders {
+    display: none;
+
+    @media only screen and (min-width: 1025px) {
+      display: block;
+    }
   }
 
   .label {
@@ -44,6 +57,7 @@ $ns: '.page-404';
     z-index: 2;
     line-height: 1;
     color: #FFF;
+    margin-bottom: 50px;
 
     &:after {
       content: '';
