@@ -60,6 +60,30 @@
     ]
   },
   {
+    "title": "Bulldog Drummond",
+    "slug": "bulldog-drummond",
+    "projectOptions": "otherWork",
+    "logo": "",
+    "screenshot": "/assets/screenshots/BulldogDrummond.jpg",
+    "link": "https://www.bulldogdrummond.com/",
+    "skills": [
+      { "skill": "Gatsby Website" },
+      { "skill": "Headless Wordpress" }
+    ]
+  },
+  {
+    "title": "PEAR Sports",
+    "slug": "pear-sports",
+    "projectOptions": "otherWork",
+    "logo": "",
+    "screenshot": "/assets/screenshots/PearSports.jpg",
+    "link": "https://www.pearsports.com/",
+    "skills": [
+      { "skill": "Gatsby Website" },
+      { "skill": "Contentful CMS" }
+    ]
+  },
+  {
     "title": "Bond Wedding",
     "slug": "bond-wedding",
     "projectOptions": "otherWork",
