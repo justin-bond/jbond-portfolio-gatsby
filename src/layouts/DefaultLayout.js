@@ -35,7 +35,7 @@ const DefaultLayout = (props) => {
         <html lang={'en'} />
         <meta
           name={'description'}
-          content={'Hello, I‘m Justin Bond and I am a full-stack web developer from Costa Mesa, California.'}
+          content={'Hello, I‘m Justin Bond and I am a Front-End Engineer based out of Orange County, CA.'}
         />
       </Helmet>
       <Header />
