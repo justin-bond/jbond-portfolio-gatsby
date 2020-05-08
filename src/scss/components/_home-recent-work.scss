@@ -15,6 +15,7 @@ $ns: '.component-home-recent-work';
 
   &__items {
     @include at-tablet {
+      margin-bottom: 37px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 36px;
@@ -29,6 +30,8 @@ $ns: '.component-home-recent-work';
     transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
 
     @include at-tablet {
+      margin-bottom: 0;
+
       &:hover {
         background-color: rgba(0,0,0, 0.5);
         box-shadow: 3px 3px 13px 0px rgba(0,0,0,0.75);
@@ -42,6 +45,22 @@ $ns: '.component-home-recent-work';
           opacity: 1;
         }
       }
+    }
+
+    &-bulldog-drummond img {
+      min-width: 110px;
+    }
+
+    &-pear-sports img {
+      min-width: 125px;
+    }
+
+    &-vizio-tvp img {
+      min-width: 150px;
+    }
+
+    &-bond-wedding img {
+      max-width: 175px;
     }
   }
 
@@ -84,5 +103,6 @@ $ns: '.component-home-recent-work';
     left: 0;
     right: 0;
     opacity: 0;
+    padding: 0 15%;
   }
 }

@@ -1,70 +1,10 @@
 [
   {
-    "title": "Kushion",
-    "slug": "kushion",
-    "projectOptions": "recentWork",
-    "agency": "530medialab",
-    "logo": "/assets/logos/kushion-logo.svg",
-    "screenshot": "/assets/screenshots/Kushion.jpg",
-    "link": "https://kushion.com",
-    "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
-      { "skill": "HTML\/CSS\/PHP\/jQuery" },
-      { "skill": "Custom Instagram API Feed" }
-    ]
-  },
-  {
-    "title": "Jason Markk",
-    "slug": "jason-mark",
-    "projectOptions": "recentWork",
-    "agency": "530medialab",
-    "logo": "/assets/logos/jm-logo.svg",
-    "screenshot": "/assets/screenshots/JM.jpg",
-    "video": "281115650",
-    "link": "https://jasonmarkk.com/",
-    "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
-      { "skill": "HTML\/CSS\/PHP\/jQuery" },
-      { "skill": "Custom Instagram API Feed" }
-    ]
-  },
-  {
-    "title": "Oliver Peoples",
-    "slug": "oliver-peoples",
-    "projectOptions": "recentWork",
-    "agency": "530medialab",
-    "logo": "/assets/logos/op-logo.svg",
-    "screenshot": "/assets/screenshots/OliverPeoples.jpg",
-    "video": "281115671",
-    "link": "https://oliverpeoples.com/",
-    "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
-      { "skill": "HTML\/CSS\/PHP\/jQuery" }
-    ]
-  },
-  {
-    "title": "Killspencer",
-    "slug": "killspencer",
-    "projectOptions": "recentWork",
-    "agency": "530medialab",
-    "logo": "/assets/logos/ks-logo.svg",
-    "screenshot": "/assets/screenshots/Killspencer.jpg",
-    "link": "https://killspencer.com/",
-    "skills": [
-      { "skill": "Shopify Website" },
-      { "skill": "Custom Shopify Theme" },
-      { "skill": "HTML\/CSS\/Liquid\/jQuery" }
-    ]
-  },
-  {
     "title": "Bulldog Drummond",
     "slug": "bulldog-drummond",
-    "projectOptions": "otherWork",
+    "projectOptions": "recentWork",
     "agency": "Envoy",
-    "logo": "",
+    "logo": "/assets/logos/bulldog-drummond-logo.svg",
     "screenshot": "/assets/screenshots/BulldogDrummond.jpg",
     "link": "https://www.bulldogdrummond.com/",
     "skills": [
@@ -75,9 +15,9 @@
   {
     "title": "PEAR Sports",
     "slug": "pear-sports",
-    "projectOptions": "otherWork",
+    "projectOptions": "recentWork",
     "agency": "Envoy",
-    "logo": "",
+    "logo": "/assets/logos/pear-sports-logo.svg",
     "screenshot": "/assets/screenshots/PearSports.jpg",
     "link": "https://www.pearsports.com/",
     "skills": [
@@ -88,12 +28,25 @@
   {
     "title": "Bond Wedding",
     "slug": "bond-wedding",
-    "projectOptions": "otherWork",
-    "logo": "",
+    "projectOptions": "recentWork",
+    "logo": "/assets/logos/bond-wedding-logo.svg",
     "screenshot": "/assets/screenshots/BondWedding.jpg",
     "link": "https://aileen.justin-bond.com/",
     "skills": [
       { "skill": "React Website" }
+    ]
+  },
+  {
+    "title": "Vizio - TVP",
+    "slug": "vizio-tvp",
+    "projectOptions": "recentWork",
+    "agency": "Envoy",
+    "logo": "/assets/logos/vizio-logo.svg",
+    "screenshot": "/assets/screenshots/TVP.jpg",
+    "link": "https://tvp.vizio.com/",
+    "skills": [
+      { "skill": "Custom Static Website" },
+      { "skill": "HTML\/CSS\/jQuery\/Swig" }
     ]
   },
   {
@@ -109,19 +62,6 @@
     ]
   },
   {
-    "title": "Vizio - TVP",
-    "slug": "vizio-tvp",
-    "projectOptions": "otherWork",
-    "agency": "Envoy",
-    "logo": "",
-    "screenshot": "/assets/screenshots/TVP.jpg",
-    "link": "https://tvp.vizio.com/",
-    "skills": [
-      { "skill": "Custom Static Website" },
-      { "skill": "HTML\/CSS\/jQuery\/Swig" }
-    ]
-  },
-  {
     "title": "Vanity Planet",
     "slug": "vanity-planet",
     "projectOptions": "otherWork",
@@ -133,6 +73,37 @@
       { "skill": "Shopify Website" },
       { "skill": "Customized Shopify Prestige Theme" },
       { "skill": "HTML\/CSS\/jQuery\/Liquid" }
+    ]
+  },
+  {
+    "title": "Jason Markk",
+    "slug": "jason-mark",
+    "projectOptions": "otherWork",
+    "agency": "530medialab",
+    "logo": "/assets/logos/jm-logo.svg",
+    "screenshot": "/assets/screenshots/JM.jpg",
+    "video": "281115650",
+    "link": "https://jasonmarkk.com/",
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" },
+      { "skill": "Custom Wordpress Theme" },
+      { "skill": "HTML\/CSS\/PHP\/jQuery" },
+      { "skill": "Custom Instagram API Feed" }
+    ]
+  },
+  {
+    "title": "Oliver Peoples",
+    "slug": "oliver-peoples",
+    "projectOptions": "otherWork",
+    "agency": "530medialab",
+    "logo": "/assets/logos/op-logo.svg",
+    "screenshot": "/assets/screenshots/OliverPeoples.jpg",
+    "video": "281115671",
+    "link": "https://oliverpeoples.com/",
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" },
+      { "skill": "Custom Wordpress Theme" },
+      { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
   {
@@ -178,6 +149,20 @@
     ]
   },
   {
+    "title": "Killspencer",
+    "slug": "killspencer",
+    "projectOptions": "otherWork",
+    "agency": "530medialab",
+    "logo": "/assets/logos/ks-logo.svg",
+    "screenshot": "/assets/screenshots/Killspencer.jpg",
+    "link": "https://killspencer.com/",
+    "skills": [
+      { "skill": "Shopify Website" },
+      { "skill": "Custom Shopify Theme" },
+      { "skill": "HTML\/CSS\/Liquid\/jQuery" }
+    ]
+  },
+  {
     "title": "Alain Mikli",
     "slug": "alain-mikli",
     "projectOptions": "otherWork",
@@ -203,6 +188,21 @@
       { "skill": "Wordpress\/Magento Website" },
       { "skill": "Custom Wordpress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
+    ]
+  },
+  {
+    "title": "Kushion",
+    "slug": "kushion",
+    "projectOptions": "otherWork",
+    "agency": "530medialab",
+    "logo": "/assets/logos/kushion-logo.svg",
+    "screenshot": "/assets/screenshots/Kushion.jpg",
+    "link": "https://kushion.com",
+    "skills": [
+      { "skill": "Wordpress\/WooCommerce Website" },
+      { "skill": "Custom Wordpress Theme" },
+      { "skill": "HTML\/CSS\/PHP\/jQuery" },
+      { "skill": "Custom Instagram API Feed" }
     ]
   },
   {

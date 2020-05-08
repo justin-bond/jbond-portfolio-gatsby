@@ -22,16 +22,18 @@ $ns: '.component-home-other-work';
       flex-flow: wrap column;
       max-height: 215px;
       width: 85%;
-      margin-left: 10%;
+      margin-left: 2%;
     }
 
     @include at-laptop {
       width: 65%;
+      margin-left: 10%;
     }
 
     li {
       margin-bottom: 22px;
       margin-left: 40px;
+      padding-right: 15px;
 
       &:before {
         content: '//';
