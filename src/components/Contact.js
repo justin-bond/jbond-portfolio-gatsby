@@ -21,6 +21,7 @@ const Contact = () => {
     formCompany: '',
     formMessage: '',
     formResponse: '',
+    formHoneypot: '',
   });
 
   const handleChange = (e) => {
@@ -42,41 +43,46 @@ const Contact = () => {
   const submitForm = (event) => {
     event.preventDefault();
 
-    const data = {
-      name: contactState.formName,
-      email: contactState.formEmail,
-      phone: contactState.formPhone,
-      company: contactState.formCompany,
-      message: contactState.formMessage,
-    };
-    // console.log(data);
+    if (!contactState.formHoneypot) {
+      const data = {
+        name: contactState.formName,
+        email: contactState.formEmail,
+        phone: contactState.formPhone,
+        company: contactState.formCompany,
+        message: contactState.formMessage,
+        url: window.location.href
+      };
+      // console.log(data);
 
-    fetch('https://justin-bond.com/sendmail/index.php', {
-      method: 'POST',
-      body: JSON.stringify(data),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      }),
-    }).then(
-      (res) => { return res.json(); }
-    ).catch(
-      (error) => {
-        console.error('Error:', error); // eslint-disable-line no-console
-      }
-    ).then(
-      (response) => {
-        // console.log('Success:', response);
-        if (response.status === 1) {
-          setContactState((prevState) => {
-            return { ...prevState, formResponse: 'accepted', formShow: false };
-          });
-        } else {
-          setContactState((prevState) => {
-            return { ...prevState, formResponse: response.error };
-          });
+      fetch('https://justin-bond.com/sendmail/index.php', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: new Headers({
+          'Content-Type': 'application/json'
+        }),
+      }).then(
+        (res) => { return res.json(); }
+      ).catch(
+        (error) => {
+          console.error('Error:', error); // eslint-disable-line no-console
         }
-      }
-    );
+      ).then(
+        (response) => {
+          // console.log('Success:', response);
+          if (response.status === 1) {
+            setContactState((prevState) => {
+              return { ...prevState, formResponse: 'accepted', formShow: false };
+            });
+          } else {
+            setContactState((prevState) => {
+              return { ...prevState, formResponse: response.error };
+            });
+          }
+        }
+      );
+    }
+
+    return null;
   };
 
   const getFormResponse = () => {
@@ -169,6 +175,16 @@ const Contact = () => {
                 name={'formMessage'}
                 id={'message'}
                 required
+              />
+            </label>
+          </div>
+          <div className={`${ns}--form__honeypot`}>
+            <label htmlFor={'honeypot'}>
+              <input
+                onChange={(e) => { handleChange(e); }}
+                type={'text'}
+                name={'formHoneypot'}
+                id={'honeypot'}
               />
             </label>
           </div>

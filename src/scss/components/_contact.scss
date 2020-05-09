@@ -72,6 +72,10 @@ $ns: '.component-contact';
     button[type='submit'] {
       @include btn--primary;
     }
+
+    &__honeypot {
+      display: none;
+    }
   }
 
   &--form__message,
