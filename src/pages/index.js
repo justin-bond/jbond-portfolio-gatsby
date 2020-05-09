@@ -5,24 +5,24 @@ import { graphql } from 'gatsby';
 import Contact from '../components/Contact';
 import Container from '../components/Container';
 import HomeIntro from '../components/HomeIntro';
-import HomeRecentWork from '../components/HomeRecentWork';
+import HomeFeaturedWork from '../components/HomeFeaturedWork';
 import HomeOtherWork from '../components/HomeOtherWork';
 import Reveal from '../components/Reveal';
 
 const Index = ({ data, location }) => {
   const {
-    recentProjects,
-    otherProjects
+    recentWork,
+    otherWork
   } = data;
 
   return (
     <Container size={'small'}>
       <HomeIntro />
       <Reveal>
-        <HomeRecentWork recentProjects={recentProjects.edges} location={location} />
+        <HomeFeaturedWork featuredWork={recentWork.edges} location={location} />
       </Reveal>
       <Reveal>
-        <HomeOtherWork otherProjects={otherProjects.edges} />
+        <HomeOtherWork otherWork={otherWork.edges} />
       </Reveal>
       <Reveal>
         <Contact />
@@ -34,7 +34,7 @@ const Index = ({ data, location }) => {
 Index.propTypes = {
   location: PropTypes.shape({}),
   data: PropTypes.shape({
-    recentProjects: PropTypes.shape({
+    recentWork: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.shape({
         node: PropTypes.shape({
           title: PropTypes.string,
@@ -44,7 +44,7 @@ Index.propTypes = {
         })
       }))
     }),
-    otherProjects: PropTypes.shape({
+    otherWork: PropTypes.shape({
       edges: PropTypes.arrayOf(PropTypes.shape({
         node: PropTypes.shape({
           title: PropTypes.string,
@@ -58,7 +58,7 @@ Index.propTypes = {
 Index.defaultProps = {
   location: null,
   data: {
-    recentProjects: {
+    recentWork: {
       edges: {
         node: {
           title: '',
@@ -68,7 +68,7 @@ Index.defaultProps = {
         }
       }
     },
-    otherProjects: {
+    otherWork: {
       edges: {
         node: {
           title: '',
@@ -81,7 +81,7 @@ Index.defaultProps = {
 
 export const query = graphql`
   query {
-    recentProjects: allProjectsJson(filter: {projectOptions: {eq: "recentWork"}}) {
+    recentWork: allWorkJson(filter: {workOptions: {eq: "recentWork"}}) {
       edges {
         node {
           title
@@ -91,7 +91,7 @@ export const query = graphql`
         }
       }
     }
-    otherProjects: allProjectsJson(filter: {projectOptions: {eq: "otherWork"}}) {
+    otherWork: allWorkJson(filter: {workOptions: {eq: "otherWork"}}) {
       edges {
         node {
           title

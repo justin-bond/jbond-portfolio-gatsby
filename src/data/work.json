@@ -2,7 +2,7 @@
   {
     "title": "Bulldog Drummond",
     "slug": "bulldog-drummond",
-    "projectOptions": "recentWork",
+    "workOptions": "recentWork",
     "agency": "Envoy",
     "logo": "/assets/logos/bulldog-drummond-logo.svg",
     "screenshot": "/assets/screenshots/BulldogDrummond.jpg",
@@ -15,7 +15,7 @@
   {
     "title": "PEAR Sports",
     "slug": "pear-sports",
-    "projectOptions": "recentWork",
+    "workOptions": "recentWork",
     "agency": "Envoy",
     "logo": "/assets/logos/pear-sports-logo.svg",
     "screenshot": "/assets/screenshots/PearSports.jpg",
@@ -28,7 +28,7 @@
   {
     "title": "Bond Wedding",
     "slug": "bond-wedding",
-    "projectOptions": "recentWork",
+    "workOptions": "recentWork",
     "logo": "/assets/logos/bond-wedding-logo.svg",
     "screenshot": "/assets/screenshots/BondWedding.jpg",
     "link": "https://aileen.justin-bond.com/",
@@ -39,7 +39,7 @@
   {
     "title": "Vizio - TVP",
     "slug": "vizio-tvp",
-    "projectOptions": "recentWork",
+    "workOptions": "recentWork",
     "agency": "Envoy",
     "logo": "/assets/logos/vizio-logo.svg",
     "screenshot": "/assets/screenshots/TVP.jpg",
@@ -52,7 +52,7 @@
   {
     "title": "Arlo CES 2019",
     "slug": "arlo-ces-2019",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "Envoy",
     "logo": "",
     "screenshot": "/assets/screenshots/ArloCES.gif",
@@ -64,7 +64,7 @@
   {
     "title": "Vanity Planet",
     "slug": "vanity-planet",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "Envoy",
     "logo": "",
     "screenshot": "/assets/screenshots/VanityPlanet.jpg",
@@ -78,7 +78,7 @@
   {
     "title": "Jason Markk",
     "slug": "jason-mark",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "/assets/logos/jm-logo.svg",
     "screenshot": "/assets/screenshots/JM.jpg",
@@ -94,7 +94,7 @@
   {
     "title": "Oliver Peoples",
     "slug": "oliver-peoples",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "/assets/logos/op-logo.svg",
     "screenshot": "/assets/screenshots/OliverPeoples.jpg",
@@ -109,7 +109,7 @@
   {
     "title": "Mastercraft",
     "slug": "mastercraft",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Mastercraft.jpg",
@@ -122,7 +122,7 @@
   {
     "title": "The Craft",
     "slug": "the-craft",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/TheCraft.jpg",
@@ -137,7 +137,7 @@
   {
     "title": "Armada Skis",
     "slug": "armada",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/ArmadaSkis.jpg",
@@ -151,7 +151,7 @@
   {
     "title": "Killspencer",
     "slug": "killspencer",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "/assets/logos/ks-logo.svg",
     "screenshot": "/assets/screenshots/Killspencer.jpg",
@@ -165,7 +165,7 @@
   {
     "title": "Alain Mikli",
     "slug": "alain-mikli",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Alainmikli.jpg",
@@ -179,7 +179,7 @@
   {
     "title": "TCS Jerky",
     "slug": "tcs-jerky",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/TcsJerky.jpg",
@@ -193,7 +193,7 @@
   {
     "title": "Kushion",
     "slug": "kushion",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "/assets/logos/kushion-logo.svg",
     "screenshot": "/assets/screenshots/Kushion.jpg",
@@ -208,7 +208,7 @@
   {
     "title": "Edgeproducts",
     "slug": "edgeproducts",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Edge.jpg",
@@ -222,7 +222,7 @@
   {
     "title": "Superchips",
     "slug": "superchips",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Superchips.jpg",
@@ -236,7 +236,7 @@
   {
     "title": "Diablosport",
     "slug": "diablosport",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Diablosport.jpg",
@@ -250,7 +250,7 @@
   {
     "title": "AMI Styling",
     "slug": "ami-styling",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/AMI.jpg",
@@ -265,7 +265,7 @@
   {
     "title": "Readylift",
     "slug": "readylift",
-    "projectOptions": "otherWork",
+    "workOptions": "otherWork",
     "agency": "530medialab",
     "logo": "",
     "screenshot": "/assets/screenshots/Readylift.jpg",
@@ -280,7 +280,7 @@
   {
     "title": "TKFit",
     "slug": "tkfit",
-    "projectOptions": "hidden",
+    "workOptions": "hidden",
     "agency": "",
     "logo": "",
     "screenshot": "/assets/screenshots/TKFit1.jpg",

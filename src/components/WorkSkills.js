@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const nsBase = 'component';
-const ns = `${nsBase}-project-skills`;
+const ns = `${nsBase}-work-skills`;
 
-const ProjectSkills = ({ skills }) => {
+const WorkSkills = ({ skills }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -27,12 +27,12 @@ const ProjectSkills = ({ skills }) => {
   );
 };
 
-ProjectSkills.propTypes = {
+WorkSkills.propTypes = {
   skills: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
-ProjectSkills.defaultProps = {
+WorkSkills.defaultProps = {
   skills: null
 };
 
-export default ProjectSkills;
+export default WorkSkills;

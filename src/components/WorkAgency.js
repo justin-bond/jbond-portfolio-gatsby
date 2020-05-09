@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const nsBase = 'component';
-const ns = `${nsBase}-project-agency`;
+const ns = `${nsBase}-work-agency`;
 
-const ProjectAgency = ({ agency }) => {
+const WorkAgency = ({ agency }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -17,12 +17,12 @@ const ProjectAgency = ({ agency }) => {
   );
 };
 
-ProjectAgency.propTypes = {
+WorkAgency.propTypes = {
   agency: PropTypes.string
 };
 
-ProjectAgency.defaultProps = {
+WorkAgency.defaultProps = {
   agency: null
 };
 
-export default ProjectAgency;
+export default WorkAgency;

@@ -7,55 +7,55 @@ import { graphql } from 'gatsby';
 import AnchorLink from '../components/AnchorLink';
 import Contact from '../components/Contact';
 import Container from '../components/Container';
-import ProjectHero from '../components/ProjectHero';
-import ProjectTitle from '../components/ProjectTitle';
-import ProjectExternalLink from '../components/ProjectExternalLink';
-import ProjectSkills from '../components/ProjectSkills';
-import ProjectAgency from '../components/ProjectAgency';
+import WorkHero from '../components/WorkHero';
+import WorkTitle from '../components/WorkTitle';
+import WorkExternalLink from '../components/WorkExternalLink';
+import WorkSkills from '../components/WorkSkills';
+import WorkAgency from '../components/WorkAgency';
 import Reveal from '../components/Reveal';
 
 const nsBase = 'template';
-const ns = `${nsBase}-project`;
+const ns = `${nsBase}-work`;
 
-const projectTemplate = ({ data }) => {
-  const project = data.projectsJson;
+const workTemplate = ({ data }) => {
+  const work = data.workJson;
 
   const rootClassnames = classNames({
     [`${nsBase} ${ns}`]: true,
-    [`${ns}--${project.slug}`]: project.slug,
+    [`${ns}--${work.slug}`]: work.slug,
   });
 
   return (
     <div className={rootClassnames}>
       <Helmet>
-        <title>{project.title}</title>
+        <title>{work.title}</title>
       </Helmet>
       <Container size={'small'}>
         <div className={`${ns}__container`}>
           <Reveal>
-            <ProjectHero project={project} />
+            <WorkHero work={work} />
           </Reveal>
           <Reveal>
-            <ProjectTitle title={project.title} />
+            <WorkTitle title={work.title} />
           </Reveal>
-          {project.link &&
+          {work.link &&
             (
               <Reveal>
-                <ProjectExternalLink externalLink={project.link} />
+                <WorkExternalLink externalLink={work.link} />
               </Reveal>
             )
           }
-          {project.skills &&
+          {work.skills &&
             (
               <Reveal>
-                <ProjectSkills skills={project.skills} />
+                <WorkSkills skills={work.skills} />
               </Reveal>
             )
           }
-          {project.agency &&
+          {work.agency &&
             (
               <Reveal>
-                <ProjectAgency agency={project.agency} />
+                <WorkAgency agency={work.agency} />
               </Reveal>
             )
           }
@@ -73,9 +73,9 @@ const projectTemplate = ({ data }) => {
   );
 };
 
-projectTemplate.propTypes = {
+workTemplate.propTypes = {
   data: PropTypes.shape({
-    projectsJson: PropTypes.shape({
+    workJson: PropTypes.shape({
       title: PropTypes.string,
       slug: PropTypes.string,
       agency: PropTypes.string,
@@ -87,13 +87,13 @@ projectTemplate.propTypes = {
   }),
 };
 
-projectTemplate.defaultProps = {
+workTemplate.defaultProps = {
   data: null
 };
 
 export const query = graphql`
   query($id: String!) {
-    projectsJson(id: { eq: $id }) {
+    workJson(id: { eq: $id }) {
       title
       slug
       agency
@@ -107,4 +107,4 @@ export const query = graphql`
   }
 `;
 
-export default projectTemplate;
+export default workTemplate;

@@ -7,11 +7,11 @@ import AnchorLink from './AnchorLink';
 import Reveal from './Reveal';
 
 const nsBase = 'component';
-const ns = `${nsBase}-home-recent-work`;
+const ns = `${nsBase}-home-featured-work`;
 
-const HomeRecentWork = (props) => {
+const HomeFeaturedWork = (props) => {
   const {
-    recentProjects,
+    featuredWork,
     location
   } = props;
 
@@ -22,13 +22,13 @@ const HomeRecentWork = (props) => {
   useEffect(() => {
     const hash = location.hash.replace('#', '');
 
-    if (hash === 'recent-work') {
+    if (hash === 'featured-work') {
       const anchorPosition = document.getElementById(hash).getBoundingClientRect();
       animateScroll.scrollTo(anchorPosition.top + window.scrollY);
     }
   }, []);
 
-  const renderRecentWork = (key) => {
+  const renderFeaturedWork = (key) => {
     const work = key.node;
     const sectionStyle = {
       backgroundImage: `url(${work.screenshot}`
@@ -51,25 +51,25 @@ const HomeRecentWork = (props) => {
   };
 
   return (
-    <div id={'recent-work'} className={rootClassnames}>
+    <div id={'featured-work'} className={rootClassnames}>
       <h1 className={`${ns}__text`}>
-        Recent Work
+        Featured Work
       </h1>
       <div className={`${ns}__items`}>
-        {recentProjects.map(renderRecentWork)}
+        {featuredWork.map(renderFeaturedWork)}
       </div>
     </div>
   );
 };
 
-HomeRecentWork.propTypes = {
-  recentProjects: PropTypes.arrayOf(PropTypes.shape({})),
+HomeFeaturedWork.propTypes = {
+  featuredWork: PropTypes.arrayOf(PropTypes.shape({})),
   location: PropTypes.shape({})
 };
 
-HomeRecentWork.defaultProps = {
-  recentProjects: null,
+HomeFeaturedWork.defaultProps = {
+  featuredWork: null,
   location: null
 };
 
-export default HomeRecentWork;
+export default HomeFeaturedWork;

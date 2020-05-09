@@ -2,11 +2,11 @@ const path = require('path');
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 const queryReferences = {
-  projectDetailPage: {
-    template: 'projectTemplate.js',
+  workDetailPage: {
+    template: 'workTemplate.js',
     pathPrefix: 'work',
-    queryAll: 'allProjectsJson',
-    querySingle: 'projectsJson',
+    queryAll: 'allWorkJson',
+    querySingle: 'workJson',
   },
 };
 
@@ -15,9 +15,9 @@ exports.createPages = ({ actions, graphql }) => {
   const pageGenerators = [];
 
   // BEGIN page creation
-  const projectDetailPage = queryReferences.projectDetailPage;
-  const projectDetailPageGenerator = createPageFactory(graphql, createPage, projectDetailPage.template, projectDetailPage.queryAll, projectDetailPage.pathPrefix);
-  pageGenerators.push(projectDetailPageGenerator);
+  const workDetailPage = queryReferences.workDetailPage;
+  const workDetailPageGenerator = createPageFactory(graphql, createPage, workDetailPage.template, workDetailPage.queryAll, workDetailPage.pathPrefix);
+  pageGenerators.push(workDetailPageGenerator);
   // END page creation
 
   return Promise.all(pageGenerators);

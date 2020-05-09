@@ -3,9 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const nsBase = 'component';
-const ns = `${nsBase}-project-title`;
+const ns = `${nsBase}-work-title`;
 
-const ProjectTitle = ({ title }) => {
+const WorkTitle = ({ title }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -17,12 +17,12 @@ const ProjectTitle = ({ title }) => {
   );
 };
 
-ProjectTitle.propTypes = {
+WorkTitle.propTypes = {
   title: PropTypes.string
 };
 
-ProjectTitle.defaultProps = {
+WorkTitle.defaultProps = {
   title: null
 };
 
-export default ProjectTitle;
+export default WorkTitle;

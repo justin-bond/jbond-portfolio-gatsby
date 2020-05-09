@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 import AnchorLink from './AnchorLink';
 
 const nsBase = 'component';
-const ns = `${nsBase}-project-external-link`;
+const ns = `${nsBase}-work-external-link`;
 
-const ProjectExternalLink = ({ externalLink }) => {
+const WorkExternalLink = ({ externalLink }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -19,12 +19,12 @@ const ProjectExternalLink = ({ externalLink }) => {
   );
 };
 
-ProjectExternalLink.propTypes = {
+WorkExternalLink.propTypes = {
   externalLink: PropTypes.string
 };
 
-ProjectExternalLink.defaultProps = {
+WorkExternalLink.defaultProps = {
   externalLink: null
 };
 
-export default ProjectExternalLink;
+export default WorkExternalLink;

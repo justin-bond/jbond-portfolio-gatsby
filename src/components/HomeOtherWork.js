@@ -11,7 +11,7 @@ const ns = `${nsBase}-home-other-work`;
 
 const HomeOtherWork = (props) => {
   const {
-    otherProjects
+    otherWork
   } = props;
 
   const rootClassnames = classNames({
@@ -65,7 +65,7 @@ const HomeOtherWork = (props) => {
           {` Other Work`}
         </div>
         <ul className={`${ns}__items`}>
-          {otherProjects.map(renderOtherWork)}
+          {otherWork.map(renderOtherWork)}
         </ul>
       </div>
     </Waypoint>
@@ -73,11 +73,11 @@ const HomeOtherWork = (props) => {
 };
 
 HomeOtherWork.propTypes = {
-  otherProjects: PropTypes.arrayOf(PropTypes.shape({}))
+  otherWork: PropTypes.arrayOf(PropTypes.shape({}))
 };
 
 HomeOtherWork.defaultProps = {
-  otherProjects: null
+  otherWork: null
 };
 
 export default HomeOtherWork;

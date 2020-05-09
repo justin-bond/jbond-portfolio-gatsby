@@ -3,36 +3,36 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const nsBase = 'component';
-const ns = `${nsBase}-project-hero`;
+const ns = `${nsBase}-work-hero`;
 
-const ProjectHero = ({ project }) => {
+const WorkHero = ({ work }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
 
-  const [projectHeroState, setProjectHeroState] = useState({
+  const [workHeroState, setWorkHeroState] = useState({
     videoVisible: false
   });
 
   const hideShowVideo = () => {
-    setProjectHeroState((prevState) => {
-      return { ...prevState, videoVisible: !projectHeroState.videoVisible };
+    setWorkHeroState((prevState) => {
+      return { ...prevState, videoVisible: !workHeroState.videoVisible };
     });
   };
 
-  const renderProjectHeroImage = () => {
+  const renderWorkHeroImage = () => {
     return (
-      <img src={project.screenshot} alt={project.slug} />
+      <img src={work.screenshot} alt={work.slug} />
     );
   };
 
-  const renderProjectHeroVideo = () => {
-    if (projectHeroState.videoVisible) {
+  const renderWorkHeroVideo = () => {
+    if (workHeroState.videoVisible) {
       return (
         <div className={`${ns}__video`}>
           <div className={`${ns}__video-container video-aspect`}>
             <iframe
-              src={`https://player.vimeo.com/video/${project.video}?autoplay=1&title=0&byline=0&portrait=0`}
+              src={`https://player.vimeo.com/video/${work.video}?autoplay=1&title=0&byline=0&portrait=0`}
               width={'640'}
               height={'360'}
               frameBorder={'0'}
@@ -49,7 +49,7 @@ const ProjectHero = ({ project }) => {
 
     return (
       <div className={`${ns}__video image`}>
-        {renderProjectHeroImage()}
+        {renderWorkHeroImage()}
         <div className={`${ns}__video-container`}>
           <div className={`${ns}__video-content`}>
             <div className={`${ns}__video-title`}>
@@ -68,33 +68,33 @@ const ProjectHero = ({ project }) => {
     );
   };
 
-  const renderProjectHero = () => {
-    if (project.video) {
+  const renderWorkHero = () => {
+    if (work.video) {
       return (
-        renderProjectHeroVideo()
+        renderWorkHeroVideo()
       );
     }
 
     return (
       <div className={`${ns}__image`}>
-        {renderProjectHeroImage()}
+        {renderWorkHeroImage()}
       </div>
     );
   };
 
   return (
     <div className={rootClassnames}>
-      {renderProjectHero()}
+      {renderWorkHero()}
     </div>
   );
 };
 
-ProjectHero.propTypes = {
-  project: PropTypes.shape({})
+WorkHero.propTypes = {
+  work: PropTypes.shape({})
 };
 
-ProjectHero.defaultProps = {
-  project: null
+WorkHero.defaultProps = {
+  work: null
 };
 
-export default ProjectHero;
+export default WorkHero;
