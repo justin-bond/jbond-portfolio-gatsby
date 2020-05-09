@@ -14,8 +14,9 @@ $ns: '.component-home-recent-work';
   }
 
   &__items {
+    margin-bottom: 37px;
+
     @include at-tablet {
-      margin-bottom: 37px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 36px;

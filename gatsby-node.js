@@ -4,7 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 const queryReferences = {
   projectDetailPage: {
     template: 'projectTemplate.js',
-    pathPrefix: 'project',
+    pathPrefix: 'work',
     queryAll: 'allProjectsJson',
     querySingle: 'projectsJson',
   },

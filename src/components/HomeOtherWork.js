@@ -46,7 +46,7 @@ const HomeOtherWork = (props) => {
         key={work.slug}
         ref={(node) => { homeOtherWorkBullets[index] = node; }}
       >
-        <AnchorLink to={`/project/${work.slug}`} className={'code-color-blue'}>
+        <AnchorLink to={`/work/${work.slug}`} className={'code-color-blue'}>
           { work.title }
         </AnchorLink>
       </li>

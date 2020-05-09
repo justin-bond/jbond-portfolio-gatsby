@@ -37,7 +37,7 @@ const HomeRecentWork = (props) => {
     return (
       <Reveal key={work.slug}>
         <div className={`${ns}__item ${ns}__item-${work.slug}`}>
-          <AnchorLink to={`/project/${work.slug}`}>
+          <AnchorLink to={`/work/${work.slug}`}>
             <div className={`${ns}__item--logo`}>
               <img src={work.logo} alt={'company_logo'} />
             </div>
