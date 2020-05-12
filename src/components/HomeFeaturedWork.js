@@ -64,7 +64,9 @@ const HomeFeaturedWork = (props) => {
 
 HomeFeaturedWork.propTypes = {
   featuredWork: PropTypes.arrayOf(PropTypes.shape({})),
-  location: PropTypes.shape({})
+  location: PropTypes.shape({
+    hash: PropTypes.string
+  })
 };
 
 HomeFeaturedWork.defaultProps = {

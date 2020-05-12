@@ -90,7 +90,11 @@ const WorkHero = ({ work }) => {
 };
 
 WorkHero.propTypes = {
-  work: PropTypes.shape({})
+  work: PropTypes.shape({
+    slug: PropTypes.string,
+    screenshot: PropTypes.string,
+    video: PropTypes.string
+  })
 };
 
 WorkHero.defaultProps = {
