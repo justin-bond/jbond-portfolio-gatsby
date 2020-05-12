@@ -39,7 +39,7 @@
     "edge >= 17"
   ],
   "devDependencies": {
-    "@danbruegge/gatsby-plugin-stylelint": "^3.4.1",
+    "@danbruegge/gatsby-plugin-stylelint": "^4.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-loader": "^2.2.1",
@@ -47,10 +47,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "gatsby-plugin-eslint": "^2.0.8",
-    "stylelint": "^10.1.0",
+    "stylelint": "^13.3.3",
     "stylelint-config-airbnb": "0.0.0",
     "stylelint-no-unsupported-browser-features": "^4.0.0",
-    "stylelint-order": "^3.1.1",
+    "stylelint-order": "^4.0.0",
     "stylelint-scss": "^3.17.2"
   }
 }
