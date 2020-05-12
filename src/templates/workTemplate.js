@@ -38,27 +38,21 @@ const workTemplate = ({ data }) => {
           <Reveal>
             <WorkTitle title={work.title} />
           </Reveal>
-          {work.link &&
-            (
-              <Reveal>
-                <WorkExternalLink externalLink={work.link} />
-              </Reveal>
-            )
-          }
-          {work.skills &&
-            (
-              <Reveal>
-                <WorkSkills skills={work.skills} />
-              </Reveal>
-            )
-          }
-          {work.agency &&
-            (
-              <Reveal>
-                <WorkAgency agency={work.agency} />
-              </Reveal>
-            )
-          }
+          {work.link && (
+            <Reveal>
+              <WorkExternalLink externalLink={work.link} />
+            </Reveal>
+          )}
+          {work.skills && (
+            <Reveal>
+              <WorkSkills skills={work.skills} />
+            </Reveal>
+          )}
+          {work.agency && (
+            <Reveal>
+              <WorkAgency agency={work.agency} />
+            </Reveal>
+          )}
           <Reveal>
             <div className={`${ns}__home`}>
               <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
