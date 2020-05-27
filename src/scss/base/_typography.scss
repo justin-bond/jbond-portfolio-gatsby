@@ -62,3 +62,13 @@ ul,
 li {
   line-height: 1.15;
 }
+
+/* WebKit/Blink Browsers */
+::selection {
+  background: solid-color('code-blue');
+}
+
+/* Gecko Browsers */
+::-moz-selection {
+  background: solid-color('code-blue');
+}
