@@ -9,13 +9,15 @@ const nsBase = 'component';
 const ns = `${nsBase}-nav`;
 
 const Nav = () => {
-  const rootClassnames = classNames({
-    [`${ns}`]: true,
-  });
-
   const [navState, setNavState] = useState({
     scrollPosition: false,
     menuActive: null
+  });
+
+  const rootClassnames = classNames({
+    [`${ns}`]: true,
+    [`open`]: navState.menuActive,
+    [`scrolled`]: navState.scrollPosition > 50
   });
 
   const listenScrollEvent = () => {
@@ -46,13 +48,10 @@ const Nav = () => {
     });
   };
 
-  const scrolled = navState.scrollPosition > 50 ? 'scrolled' : '';
-  const menuActive = navState.menuActive ? 'active' : '';
-
   return (
     <div
       id={'site-menu'}
-      className={`${rootClassnames} ${scrolled} ${menuActive}`}
+      className={rootClassnames}
     >
       <div className={`${ns}__wrapper`}>
         <nav className={`${ns}__navigation`}>
@@ -77,17 +76,17 @@ const Nav = () => {
       >
         <div className={`${ns}__menu-button`}>
           <div className={`${ns}__menu-top`}>
-            <div className={`${ns}__menu-top__left`} />
-            <div className={`${ns}__menu-top__middle`} />
-            <div className={`${ns}__menu-top__right`} />
+            <div className={`${ns}__menu-top-left`} />
+            <div className={`${ns}__menu-top-middle`} />
+            <div className={`${ns}__menu-top-right`} />
           </div>
           <div className={`${ns}__menu-middle`}>
-            <div className={`${ns}__menu-middle__left`} />
-            <div className={`${ns}__menu-middle__right`} />
+            <div className={`${ns}__menu-middle-left`} />
+            <div className={`${ns}__menu-middle-right`} />
           </div>
           <div className={`${ns}__menu-bottom`}>
-            <div className={`${ns}__menu-bottom__left`} />
-            <div className={`${ns}__menu-bottom__right`} />
+            <div className={`${ns}__menu-bottom-left`} />
+            <div className={`${ns}__menu-bottom-right`} />
           </div>
         </div>
       </button>
