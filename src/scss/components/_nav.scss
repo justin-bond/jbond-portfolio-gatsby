@@ -30,26 +30,68 @@ $ns: '.component-nav';
       }
 
       #{$ns}__control {
-        display: block;
+        opacity: 1;
+        visibility: visible;
       }
 
-      &.active {
+      #{$ns}__menu-top,
+      #{$ns}__menu-middle,
+      #{$ns}__menu-bottom {
+        > div {
+          transform: translateX(0%);
+        }
+      }
+
+      &.open {
         max-width: 350px;
 
         #{$ns}__wrapper {
           opacity: 1;
           transform: translateX(-40%);
         }
+
+        #{$ns}__menu-top-left {
+          transform: rotate(45deg) translateX(14px);
+        }
+
+        #{$ns}__menu-bottom-left {
+          transform: rotate(-45deg) translateX(14px);
+        }
       }
     }
   }
 
-  &.active {
+  &.open {
     max-width: 350px;
 
     #{$ns}__wrapper {
       opacity: 1;
       transform: translateX(0%);
+    }
+
+    #{$ns}__menu {
+      &-top-middle,
+      &-top-right,
+      &-middle-left,
+      &-middle-right,
+      &-bottom-right {
+        width: 0;
+        margin: 0;
+      }
+
+      &-top-left,
+      &-bottom-left {
+        width: 30px;
+        margin: 0;
+      }
+
+      &-top-left {
+        transform: rotate(45deg) translateX(14px);
+      }
+
+      &-bottom-left {
+        transform: rotate(-45deg) translateX(14px);
+      }
     }
   }
 
@@ -67,7 +109,8 @@ $ns: '.component-nav';
     @include at-tablet {
       position: fixed;
       top: 65px;
-      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 
@@ -106,17 +149,12 @@ $ns: '.component-nav';
 
       > * {
         display: inline-block;
-        // border-bottom: 2px solid transparent;
         transition: border-bottom 0.3s;
         color: solid-color('white');
         line-height: 4em;
 
         &:after {
           height: 2px;
-        }
-
-        &:hover {
-          // border-bottom: 2px solid solid-color('white');
         }
       }
     }
@@ -133,6 +171,11 @@ $ns: '.component-nav';
       height: 5.5px;
       display: inline-block;
       margin-right: 2.5px;
+      transition: all 0.4s ease;
+
+      @include at-tablet {
+        transform: translateX(360%);
+      }
 
       &:last-child {
         margin-right: 0;
@@ -140,94 +183,41 @@ $ns: '.component-nav';
     }
   }
 
-  &__menu-top__left {
-    width: 21px;
+  &__menu-top-left,
+  &__menu-top-right,
+  &__menu-middle-left,
+  &__menu-bottom-left {
     background-color: #F8F8F8;
-    animation-name: top__left;
-    animation-duration: 0.4s;
   }
 
-  &__menu-top__middle {
+  &__menu-top-left {
+    width: 21px;
+  }
+
+  &__menu-top-middle {
     width: 23px;
     background-color: #10D0D0;
-    animation-name: top__middle;
-    animation-duration: 0.4s;
   }
 
-  &__menu-top__right {
+  &__menu-top-right {
     width: 6.5px;
-    background-color: #F8F8F8;
-    animation-name: top__right;
-    animation-duration: 0.4s;
   }
 
-  &__menu-middle__left {
+  &__menu-middle-left {
     width: 18px;
-    background-color: #F8F8F8;
-    animation-name: middle__left;
-    animation-duration: 0.4s;
   }
 
-  &__menu-middle__right {
+  &__menu-middle-right {
     width: 44px;
     background-color: #FFF146;
-    animation-name: middle__right;
-    animation-duration: 0.4s;
   }
 
-  &__menu-bottom__left {
+  &__menu-bottom-left {
     width: 18px;
-    background-color: #F8F8F8;
-    animation-name: bottom__left;
-    animation-duration: 0.4s;
   }
 
-  &__menu-bottom__right {
+  &__menu-bottom-right {
     width: 6.5px;
     background-color: #FF21B2;
-    animation-name: bottom__right;
-    animation-duration: 0.4s;
   }
-}
-
-@keyframes top__left {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
-}
-
-@keyframes top__middle {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
-}
-
-@keyframes top__right {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
-}
-
-@keyframes middle__left {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
-}
-
-@keyframes middle__right {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
-}
-
-@keyframes bottom__left {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
-}
-
-@keyframes bottom__right {
-  0% { transform: translateX(360%); }
-
-  100% { transform: translateX(0%); }
 }
