@@ -27,7 +27,7 @@ const HomeIntro = () => {
       </h1>
       <ul className={`${ns}__bullets`}>
         <li ref={(node) => { homeIntroBullets[0] = node; }}>
-          Skilled in React/Gatsby, Shopify, Magento, Wordpress, MySQL, GraphQL, PHP, and Javascript.
+          Skilled in React/Gatsby, Shopify, Magento, WordPress, MySQL, GraphQL, PHP, and Javascript.
         </li>
         <li ref={(node) => { homeIntroBullets[1] = node; }}>
           When I am not coding I enjoy listening to music, watching football, golfing, riding motorcycles, and going on hikes with my wife and our fur child.
