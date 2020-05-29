@@ -7,7 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
+    title: `Justin Bond`,
     siteUrl: `https://justinbond.dev/`,
+    description: `Justin Bond is a Front-End Engineer based out of Orange County, CA.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
