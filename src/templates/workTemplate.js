@@ -33,11 +33,11 @@ const workTemplate = ({ data }) => {
         meta={[
           {
             name: `og:image`,
-            content: `${window.location.href.split('/').slice(0, 3).join('/')}${work.screenshot}`
+            content: `https://justinbond.dev${work.screenshot}`
           },
           {
             name: `twitter:image`,
-            content: `${window.location.href.split('/').slice(0, 3).join('/')}${work.screenshot}`
+            content: `https://justinbond.dev${work.screenshot}`
           },
         ]}
       />
