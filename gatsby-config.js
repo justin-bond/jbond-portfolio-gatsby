@@ -6,11 +6,16 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    siteUrl: `https://justinbond.dev/`,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     `gatsby-plugin-eslint`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-robots-txt`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
