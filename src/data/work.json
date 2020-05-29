@@ -9,7 +9,7 @@
     "link": "https://www.bulldogdrummond.com/",
     "skills": [
       { "skill": "Gatsby Website" },
-      { "skill": "Headless Wordpress" }
+      { "skill": "Headless WordPress" }
     ]
   },
   {
@@ -85,8 +85,8 @@
     "video": "281115650",
     "link": "https://jasonmarkk.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
+      { "skill": "WordPress\/WooCommerce Website" },
+      { "skill": "Custom WordPress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
     ]
@@ -101,8 +101,8 @@
     "video": "281115671",
     "link": "https://oliverpeoples.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
+      { "skill": "WordPress\/WooCommerce Website" },
+      { "skill": "Custom WordPress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -129,8 +129,8 @@
     "video": "281115682",
     "link": "https://craftlife.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento 2 Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -143,8 +143,8 @@
     "screenshot": "/assets/screenshots/ArmadaSkis.jpg",
     "link": "https://armadaskis.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
+      { "skill": "WordPress\/WooCommerce Website" },
+      { "skill": "Custom WordPress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -171,8 +171,8 @@
     "screenshot": "/assets/screenshots/Alainmikli.jpg",
     "link": "http://www.alainmikli.com/",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
+      { "skill": "WordPress\/WooCommerce Website" },
+      { "skill": "Custom WordPress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -185,8 +185,8 @@
     "screenshot": "/assets/screenshots/TcsJerky.jpg",
     "link": "https://www.tcsjerky.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -199,8 +199,8 @@
     "screenshot": "/assets/screenshots/Kushion.jpg",
     "link": "https://kushion.com",
     "skills": [
-      { "skill": "Wordpress\/WooCommerce Website" },
-      { "skill": "Custom Wordpress Theme" },
+      { "skill": "WordPress\/WooCommerce Website" },
+      { "skill": "Custom WordPress Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
     ]
@@ -214,8 +214,8 @@
     "screenshot": "/assets/screenshots/Edge.jpg",
     "link": "https://edgeproducts.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -228,8 +228,8 @@
     "screenshot": "/assets/screenshots/Superchips.jpg",
     "link": "https://superchips.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento 2 Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -242,8 +242,8 @@
     "screenshot": "/assets/screenshots/Diablosport.jpg",
     "link": "http://www.diablosport.com",
     "skills": [
-      { "skill": "Wordpress\/Magento Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" }
     ]
   },
@@ -256,8 +256,8 @@
     "screenshot": "/assets/screenshots/AMI.jpg",
     "link": "https://amistyling.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento 2 Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
     ]
@@ -271,8 +271,8 @@
     "screenshot": "/assets/screenshots/Readylift.jpg",
     "link": "https://www.readylift.com/",
     "skills": [
-      { "skill": "Wordpress\/Magento 2 Website" },
-      { "skill": "Custom Wordpress\/Magento Theme" },
+      { "skill": "WordPress\/Magento 2 Website" },
+      { "skill": "Custom WordPress\/Magento Theme" },
       { "skill": "HTML\/CSS\/PHP\/jQuery" },
       { "skill": "Custom Instagram API Feed" }
     ]
@@ -286,7 +286,7 @@
     "screenshot": "/assets/screenshots/TKFit1.jpg",
     "link": "https://tkfitep.com/",
     "skills": [
-      { "skill": "Wordpress Website" },
+      { "skill": "WordPress Website" },
       { "skill": "Enfold Gym Theme" }
     ]
   }
