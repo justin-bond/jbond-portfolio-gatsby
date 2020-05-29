@@ -8,6 +8,7 @@ function SEO({
   meta,
   title,
   page,
+  image
 }) {
   const { site } = useStaticQuery(
     graphql`
@@ -24,6 +25,7 @@ function SEO({
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = `${ site.siteMetadata.title } | Front-End Engineer/Developer`;
+  const defaultImage = `/assets/jb-logo-black.jpg`;
 
   return (
     <Helmet
@@ -52,6 +54,10 @@ function SEO({
           content: metaDescription
         },
         {
+          name: `og:image`,
+          content: `https://justinbond.dev${image || defaultImage}`
+        },
+        {
           property: `og:type`,
           content: `website`
         },
@@ -66,6 +72,10 @@ function SEO({
         {
           name: `twitter:description`,
           content: metaDescription
+        },
+        {
+          name: `twitter:image`,
+          content: `https://justinbond.dev${image || defaultImage}`
         }
       ].concat(meta)}
     />

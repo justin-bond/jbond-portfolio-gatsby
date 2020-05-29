@@ -30,16 +30,7 @@ const workTemplate = ({ data }) => {
       <SEO
         title={`${ work.title} | Work`}
         page={work.title}
-        meta={[
-          {
-            name: `og:image`,
-            content: `https://justinbond.dev${work.screenshot}`
-          },
-          {
-            name: `twitter:image`,
-            content: `https://justinbond.dev${work.screenshot}`
-          },
-        ]}
+        image={work.screenshot}
       />
       <Container size={'small'}>
         <div className={`${ns}__container`}>
