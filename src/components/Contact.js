@@ -54,7 +54,7 @@ const Contact = () => {
       };
       // console.log(data);
 
-      fetch('https://justin-bond.com/sendmail/index.php', {
+      fetch('https://api.justinbond.dev/contact-form/index.php', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: new Headers({
