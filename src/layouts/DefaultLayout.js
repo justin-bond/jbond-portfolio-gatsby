@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Helmet } from 'react-helmet';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { TweenMax } from 'gsap';
@@ -31,13 +30,6 @@ const DefaultLayout = (props) => {
 
   return (
     <div className={rootClassnames} ref={(node) => { defaultLayout = node; }}>
-      <Helmet defaultTitle={'Justin Bond | Front-End Engineer/Developer'} titleTemplate={'%s | Justin Bond'}>
-        <html lang={'en'} />
-        <meta
-          name={'description'}
-          content={'Hello, I‘m Justin Bond and I am a Front-End Engineer based out of Orange County, CA.'}
-        />
-      </Helmet>
       <Header />
       <div className={`${ns}__content`}>
         {children}

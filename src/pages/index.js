@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import SEO from '../components/SEO';
 import Contact from '../components/Contact';
 import Container from '../components/Container';
 import HomeIntro from '../components/HomeIntro';
@@ -17,6 +18,7 @@ const Index = ({ data, location }) => {
 
   return (
     <Container size={'small'}>
+      <SEO page={'home'} />
       <HomeIntro />
       <Reveal>
         <HomeFeaturedWork featuredWork={recentWork.edges} location={location} />

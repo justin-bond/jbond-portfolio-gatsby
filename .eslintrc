@@ -35,6 +35,7 @@
       'html': 'enforce',
       'custom': 'enforce'
     }],
+    'react/prop-types': [0]
   },
   'globals': {
     'window': true,

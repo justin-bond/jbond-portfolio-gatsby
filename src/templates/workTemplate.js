@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Helmet } from 'react-helmet';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
+import SEO from '../components/SEO';
 import AnchorLink from '../components/AnchorLink';
 import Contact from '../components/Contact';
 import Container from '../components/Container';
@@ -27,9 +27,20 @@ const workTemplate = ({ data }) => {
 
   return (
     <div className={rootClassnames}>
-      <Helmet>
-        <title>{work.title}</title>
-      </Helmet>
+      <SEO
+        title={`${ work.title} | Work`}
+        page={work.title}
+        meta={[
+          {
+            name: `og:image`,
+            content: `https://justinbond.dev${work.screenshot}`
+          },
+          {
+            name: `twitter:image`,
+            content: `https://justinbond.dev${work.screenshot}`
+          },
+        ]}
+      />
       <Container size={'small'}>
         <div className={`${ns}__container`}>
           <Reveal>
