@@ -50,6 +50,44 @@
     ]
   },
   {
+    "title": "Violux",
+    "slug": "violux",
+    "workOptions": "otherWork",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/assets/screenshots/Violux.jpg",
+    "link": "https://www.violux.com/",
+    "skills": [
+      { "skill": "Gatsby Website" },
+      { "skill": "Headless Shopify" }
+    ]
+  },
+  {
+    "title": "Vistria Impact Report",
+    "slug": "vistria-impact-report",
+    "workOptions": "otherWork",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/assets/screenshots/VistriaImpactReport.jpg",
+    "link": "https://www.vistria.com/2020impactreport/",
+    "skills": [
+      { "skill": "Gatsby Website" }
+    ]
+  },
+  {
+    "title": "Vistria",
+    "slug": "vistria",
+    "workOptions": "otherWork",
+    "agency": "Envoy",
+    "logo": "",
+    "screenshot": "/assets/screenshots/Vistria.jpg",
+    "link": "https://www.vistria.com/",
+    "skills": [
+      { "skill": "Gatsby Website" },
+      { "skill": "Headless WordPress" }
+    ]
+  },
+  {
     "title": "Arlo CES 2019",
     "slug": "arlo-ces-2019",
     "workOptions": "otherWork",
