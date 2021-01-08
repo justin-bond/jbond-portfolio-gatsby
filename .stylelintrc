@@ -6,7 +6,7 @@
   'rules': {
     'plugin/no-unsupported-browser-features': [true, {
       'browsers': ['> 2%', 'not dead', 'not ie <= 11'],
-      'ignore': ['rem']
+      'ignore': ['rem', 'multicolumn']
     }],
     'string-quotes': 'single',
     'color-hex-case': 'upper',
