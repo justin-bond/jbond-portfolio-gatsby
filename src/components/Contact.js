@@ -21,7 +21,7 @@ const Contact = () => {
     formCompany: '',
     formMessage: '',
     formResponse: '',
-    formHoneypot: '',
+    formPitfall: '',
   });
 
   const handleChange = (e) => {
@@ -43,7 +43,7 @@ const Contact = () => {
   const submitForm = (event) => {
     event.preventDefault();
 
-    if (!contactState.formHoneypot) {
+    if (!contactState.formPitfall) {
       const data = {
         name: contactState.formName,
         email: contactState.formEmail,
@@ -178,13 +178,13 @@ const Contact = () => {
               />
             </label>
           </div>
-          <div className={`${ns}--form__honeypot`}>
-            <label htmlFor={'honeypot'}>
+          <div className={`${ns}--form__pitfall`}>
+            <label htmlFor={'pitfall'}>
               <input
                 onChange={(e) => { handleChange(e); }}
                 type={'text'}
-                name={'formHoneypot'}
-                id={'honeypot'}
+                name={'formPitfall'}
+                id={'pitfall'}
               />
             </label>
           </div>
