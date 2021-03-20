@@ -17,87 +17,121 @@ import Reveal from '../components/Reveal';
 const nsBase = 'template';
 const ns = `${nsBase}-work`;
 
-const workTemplate = ({ data }) => {
-  const work = data.workJson;
+const workTemplate = ({ data: { project } }) => {
+  console.log(project);
+  // const work = data.workJson;
 
   const rootClassnames = classNames({
     [`${nsBase} ${ns}`]: true,
-    [`${ns}--${work.slug}`]: work.slug,
+    [`${ns}--${project.slug}`]: project.slug,
   });
 
   return (
     <div className={rootClassnames}>
       <SEO
-        title={`${ work.title} | Work`}
-        page={work.title}
-        image={work.screenshot}
+        title={`${ project.title} | Work`}
+        page={project.title}
+        // image={project.screenshot}
       />
-      <Container size={'small'}>
-        <div className={`${ns}__container`}>
-          <Reveal>
-            <WorkHero work={work} />
-          </Reveal>
-          <Reveal>
-            <WorkTitle title={work.title} />
-          </Reveal>
-          {work.link && (
-            <Reveal>
-              <WorkExternalLink externalLink={work.link} />
-            </Reveal>
-          )}
-          {work.skills && (
-            <Reveal>
-              <WorkSkills skills={work.skills} />
-            </Reveal>
-          )}
-          {work.agency && (
-            <Reveal>
-              <WorkAgency agency={work.agency} />
-            </Reveal>
-          )}
-          <Reveal>
-            <div className={`${ns}__home`}>
-              <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
-            </div>
-          </Reveal>
-        </div>
-        <Reveal>
-          <Contact />
-        </Reveal>
-      </Container>
+      {project.title}
     </div>
   );
+
+  // return (
+  //   <div className={rootClassnames}>
+  //     <SEO
+  //       title={`${ work.title} | Work`}
+  //       page={work.title}
+  //       image={work.screenshot}
+  //     />
+  //     <Container size={'small'}>
+  //       <div className={`${ns}__container`}>
+  //         <Reveal>
+  //           <WorkHero work={work} />
+  //         </Reveal>
+  //         <Reveal>
+  //           <WorkTitle title={work.title} />
+  //         </Reveal>
+  //         {work.link && (
+  //           <Reveal>
+  //             <WorkExternalLink externalLink={work.link} />
+  //           </Reveal>
+  //         )}
+  //         {work.skills && (
+  //           <Reveal>
+  //             <WorkSkills skills={work.skills} />
+  //           </Reveal>
+  //         )}
+  //         {work.agency && (
+  //           <Reveal>
+  //             <WorkAgency agency={work.agency} />
+  //           </Reveal>
+  //         )}
+  //         <Reveal>
+  //           <div className={`${ns}__home`}>
+  //             <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
+  //           </div>
+  //         </Reveal>
+  //       </div>
+  //       <Reveal>
+  //         <Contact />
+  //       </Reveal>
+  //     </Container>
+  //   </div>
+  // );
 };
 
-workTemplate.propTypes = {
-  data: PropTypes.shape({
-    workJson: PropTypes.shape({
-      title: PropTypes.string,
-      slug: PropTypes.string,
-      agency: PropTypes.string,
-      screentshot: PropTypes.string,
-      video: PropTypes.string,
-      link: PropTypes.string,
-      skills: PropTypes.arrayOf(PropTypes.shape({}))
-    }),
-  }),
-};
+// workTemplate.propTypes = {
+//   data: PropTypes.shape({
+//     workJson: PropTypes.shape({
+//       title: PropTypes.string,
+//       slug: PropTypes.string,
+//       agency: PropTypes.string,
+//       screentshot: PropTypes.string,
+//       video: PropTypes.string,
+//       link: PropTypes.string,
+//       skills: PropTypes.arrayOf(PropTypes.shape({}))
+//     }),
+//   }),
+// };
 
-workTemplate.defaultProps = {
-  data: null
-};
+// workTemplate.defaultProps = {
+//   data: null
+// };
+
+// export const query = graphql`
+//   query($id: String!) {
+//     workJson(id: { eq: $id }) {
+//       title
+//       slug
+//       agency
+//       screenshot
+//       video
+//       link
+//       skills {
+//         skill
+//       }
+//     }
+//   }
+// `;
 
 export const query = graphql`
   query($id: String!) {
-    workJson(id: { eq: $id }) {
+    project: wpProject(id: { eq: $id }) {
       title
       slug
-      agency
-      screenshot
-      video
-      link
-      skills {
-        skill
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+      acfProjectDetails {
+        websiteLink
+        videoLink
+        disclaimer
+        bullets {
+          bullet
+        }
       }
     }
   }
