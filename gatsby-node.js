@@ -1,14 +1,14 @@
-const path = require('path');
-const { createFilePath } = require(`gatsby-source-filesystem`);
+// const { createFilePath } = require(`gatsby-source-filesystem`);
+// const path = require('path');
 
-const queryReferences = {
-  workDetailPage: {
-    template: 'workTemplate.js',
-    pathPrefix: 'work',
-    queryAll: 'allWorkJson',
-    querySingle: 'workJson',
-  },
-};
+// const queryReferences = {
+//   workDetailPage: {
+//     template: 'workTemplate.js',
+//     pathPrefix: 'work',
+//     queryAll: 'allWorkJson',
+//     querySingle: 'workJson',
+//   },
+// };
 
 const createProjects = require(`./gatsby/createProjects`);
 

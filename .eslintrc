@@ -1,46 +1,46 @@
 {
-  'extends': 'airbnb',
-  'plugins': ['react'],
-  'rules': {
-    'no-unused-vars': 1,
-    'indent': ['error', 2],
+  "extends": "airbnb",
+  "plugins": ["react"],
+  "rules": {
+    "no-unused-vars": 1,
+    "indent": ["error", 2],
     "operator-linebreak": [2, "before", { "overrides": { "?": "after", "&&": "after" } }],
-    'comma-dangle': [
-      'error',
+    "comma-dangle": [
+      "error",
       {
-        'objects': 'only-multiline',
-        'arrays': 'only-multiline',
-        'imports': 'never',
-        'exports': 'never',
-        'functions': 'never',
-      },
+        "objects": "only-multiline",
+        "arrays": "only-multiline",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
     ],
-    'arrow-body-style': ['error', 'always'],
-    'import/no-extraneous-dependencies': [0],
-    'no-underscore-dangle': [2, { 'allow': ['_gotcha'] }],
+    "arrow-body-style": ["error", "always"],
+    "import/no-extraneous-dependencies": [0],
+    "no-underscore-dangle": [2, { "allow": ["_gotcha"] }],
 
     // options to emulate prettier setup
-    'semi': ['error', 'always'],
-    'max-len': ['error', { code: 160, 'ignoreUrls': true }],
-    'template-curly-spacing': 0,
-    'arrow-parens': ['error', 'always'],
-    'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
+    "semi": ["error", "always"],
+    "max-len": ["error", { "code": 160, "ignoreUrls": true }],
+    "template-curly-spacing": 0,
+    "arrow-parens": ["error", "always"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
 
     // react plugin - options
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
-    'react/jsx-filename-extension': [1, { 'extensions': ['.js'] }], // use only .js files
-    'react/jsx-curly-brace-presence': [1, { 'props': 'always', 'children': 'never' }],
-    'react/jsx-props-no-spreading': [2, {
-      'html': 'enforce',
-      'custom': 'enforce'
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }], // use only .js files
+    "react/jsx-curly-brace-presence": [1, { "props": "always", "children": "never" }],
+    "react/jsx-props-no-spreading": [2, {
+      "html": "enforce",
+      "custom": "enforce"
     }],
-    'react/prop-types': [0]
+    "react/prop-types": [0]
   },
-  'globals': {
-    'window': true,
-    'fetch': true,
-    'Headers': true,
-    'document': true
+  "globals": {
+    "window": true,
+    "fetch": true,
+    "Headers": true,
+    "document": true
   }
 }
