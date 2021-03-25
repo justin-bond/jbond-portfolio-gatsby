@@ -1,17 +1,14 @@
 import React from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+
+import setMetaImage from '../utils/setMetaImage';
 
 import SEO from '../components/SEO';
 import AnchorLink from '../components/AnchorLink';
 import Contact from '../components/Contact';
 import Container from '../components/Container';
 import WorkHero from '../components/WorkHero';
-import WorkTitle from '../components/WorkTitle';
-import WorkExternalLink from '../components/WorkExternalLink';
-import WorkSkills from '../components/WorkSkills';
-import WorkAgency from '../components/WorkAgency';
 import Reveal from '../components/Reveal';
 
 const nsBase = 'template';
@@ -19,101 +16,90 @@ const ns = `${nsBase}-work`;
 
 const workTemplate = ({ data: { project } }) => {
   console.log(project);
-  // const work = data.workJson;
+
+  const {
+    title,
+    slug,
+    featuredImage,
+    acfProjectDetails: {
+      seo,
+      videoLink,
+      bullets,
+      websiteLink,
+      disclaimer,
+    },
+  } = project;
 
   const rootClassnames = classNames({
     [`${nsBase} ${ns}`]: true,
-    [`${ns}--${project.slug}`]: project.slug,
+    [`${ns}--${slug}`]: slug,
   });
+
+  // Set the meta image
+  const metaImage = setMetaImage(featuredImage.node, seo);
 
   return (
     <div className={rootClassnames}>
       <SEO
-        title={`${ project.title} | Work`}
-        page={project.title}
-        // image={project.screenshot}
+        title={`${seo.title || title} | Work`}
+        page={title}
+        image={metaImage}
+        description={seo.metaDescription}
       />
-      {project.title}
+      <Container size={'small'}>
+        <div className={`${ns}__container`}>
+          <Reveal>
+            <WorkHero
+              slug={slug}
+              image={featuredImage.node.sourceUrl}
+              video={videoLink}
+            />
+          </Reveal>
+          <Reveal>
+            <div className={`${ns}__title`}>
+              <h1>{title}</h1>
+            </div>
+          </Reveal>
+          {websiteLink && (
+            <Reveal>
+              <div className={`${ns}__website-link`}>
+                <AnchorLink to={websiteLink} target={'_blank'}>Website Link</AnchorLink>
+              </div>
+            </Reveal>
+          )}
+          {bullets && (
+            <Reveal>
+              <div className={`${ns}__bullets`}>
+                {bullets.map(({ bullet }) => {
+                  return (
+                    <div className={`${ns}__bullet`} key={bullet}>
+                      {bullet}
+                    </div>
+                  );
+                })}
+              </div>
+            </Reveal>
+          )}
+          {disclaimer && (
+            <Reveal>
+              <div className={`${ns}__disclaimer`}>
+                {disclaimer}
+              </div>
+            </Reveal>
+          )}
+          <Reveal>
+            <div className={`${ns}__home`}>
+              <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
+            </div>
+          </Reveal>
+        </div>
+        <Reveal>
+          <Contact />
+        </Reveal>
+      </Container>
     </div>
   );
-
-  // return (
-  //   <div className={rootClassnames}>
-  //     <SEO
-  //       title={`${ work.title} | Work`}
-  //       page={work.title}
-  //       image={work.screenshot}
-  //     />
-  //     <Container size={'small'}>
-  //       <div className={`${ns}__container`}>
-  //         <Reveal>
-  //           <WorkHero work={work} />
-  //         </Reveal>
-  //         <Reveal>
-  //           <WorkTitle title={work.title} />
-  //         </Reveal>
-  //         {work.link && (
-  //           <Reveal>
-  //             <WorkExternalLink externalLink={work.link} />
-  //           </Reveal>
-  //         )}
-  //         {work.skills && (
-  //           <Reveal>
-  //             <WorkSkills skills={work.skills} />
-  //           </Reveal>
-  //         )}
-  //         {work.agency && (
-  //           <Reveal>
-  //             <WorkAgency agency={work.agency} />
-  //           </Reveal>
-  //         )}
-  //         <Reveal>
-  //           <div className={`${ns}__home`}>
-  //             <AnchorLink to={'/'} direction={'left'}>Back to Home</AnchorLink>
-  //           </div>
-  //         </Reveal>
-  //       </div>
-  //       <Reveal>
-  //         <Contact />
-  //       </Reveal>
-  //     </Container>
-  //   </div>
-  // );
 };
-
-// workTemplate.propTypes = {
-//   data: PropTypes.shape({
-//     workJson: PropTypes.shape({
-//       title: PropTypes.string,
-//       slug: PropTypes.string,
-//       agency: PropTypes.string,
-//       screentshot: PropTypes.string,
-//       video: PropTypes.string,
-//       link: PropTypes.string,
-//       skills: PropTypes.arrayOf(PropTypes.shape({}))
-//     }),
-//   }),
-// };
-
-// workTemplate.defaultProps = {
-//   data: null
-// };
-
-// export const query = graphql`
-//   query($id: String!) {
-//     workJson(id: { eq: $id }) {
-//       title
-//       slug
-//       agency
-//       screenshot
-//       video
-//       link
-//       skills {
-//         skill
-//       }
-//     }
-//   }
-// `;
 
 export const query = graphql`
   query($id: String!) {
@@ -126,6 +112,13 @@ export const query = graphql`
         }
       }
       acfProjectDetails {
+        seo {
+          title
+          metaDescription
+          metaImage {
+            sourceUrl
+          }
+        }
         websiteLink
         videoLink
         disclaimer
