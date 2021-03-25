@@ -34,7 +34,7 @@ const workTemplate = ({ data: { project } }) => {
   });
 
   // Set the meta image
-  const metaImage = setMetaImage(featuredImage.node, seo);
+  const metaImage = setMetaImage(featuredImage?.node, seo);
 
   return (
     <div className={rootClassnames}>
@@ -49,7 +49,7 @@ const workTemplate = ({ data: { project } }) => {
           <Reveal>
             <WorkHero
               slug={slug}
-              image={featuredImage.node.sourceUrl}
+              image={featuredImage?.node.sourceUrl}
               video={videoLink}
             />
           </Reveal>
