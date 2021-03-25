@@ -58,7 +58,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Raleway\:600,700`,
+          `Raleway:600,700`,
           `Share Tech Mono`
         ]
       }

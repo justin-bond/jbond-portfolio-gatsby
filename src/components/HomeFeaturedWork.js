@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { animateScroll } from 'react-scroll';
 
 import AnchorLink from './AnchorLink';
 import Reveal from './Reveal';
@@ -9,29 +8,14 @@ import Reveal from './Reveal';
 const nsBase = 'component';
 const ns = `${nsBase}-home-featured-work`;
 
-const HomeFeaturedWork = (props) => {
-  const {
-    featuredWork,
-    location
-  } = props;
-
+const HomeFeaturedWork = ({ featuredWork }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
 
-  useEffect(() => {
-    const hash = location.hash.replace('#', '');
-
-    if (hash === 'featured-work') {
-      const anchorPosition = document.getElementById(hash).getBoundingClientRect();
-      animateScroll.scrollTo(anchorPosition.top + window.scrollY);
-    }
-  }, []);
-
-  const renderFeaturedWork = (key) => {
-    const work = key.node;
+  const renderFeaturedWork = (work) => {
     const sectionStyle = {
-      backgroundImage: `url(${work.screenshot}`
+      backgroundImage: `url(${work.featuredImage.node.sourceUrl}`
     };
 
     return (
@@ -39,10 +23,10 @@ const HomeFeaturedWork = (props) => {
         <div className={`${ns}__item ${ns}__item-${work.slug}`}>
           <AnchorLink to={`/work/${work.slug}`}>
             <div className={`${ns}__item--logo`}>
-              <img src={work.logo} alt={'company_logo'} />
+              <img src={work.acfProjectDetails.logo.sourceUrl} alt={work.acfProjectDetails.logo.title} />
             </div>
             <div className={`${ns}__item--hover`} style={sectionStyle}>
-              { work.title }
+              {work.title}
             </div>
           </AnchorLink>
         </div>
@@ -56,7 +40,7 @@ const HomeFeaturedWork = (props) => {
         Featured Work
       </h1>
       <div className={`${ns}__items`}>
-        {featuredWork.map(renderFeaturedWork)}
+        {featuredWork.map((work) => { return renderFeaturedWork(work); })}
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ import { TweenMax } from 'gsap';
 const nsBase = 'component';
 const ns = `${nsBase}-home-intro`;
 
-const HomeIntro = () => {
+const HomeIntro = ({ intro }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -23,15 +23,16 @@ const HomeIntro = () => {
   return (
     <div className={rootClassnames}>
       <h1 className={`${ns}__text`} ref={(node) => { homeIntroText = node; }}>
-        Hello, I‘m Justin Bond and I am a Front-End Engineer based out of Orange County, CA.
+        {intro.title}
       </h1>
       <ul className={`${ns}__bullets`}>
-        <li ref={(node) => { homeIntroBullets[0] = node; }}>
-          Skilled in React/Gatsby, Shopify, Magento, WordPress, MySQL, GraphQL, PHP, and Javascript.
-        </li>
-        <li ref={(node) => { homeIntroBullets[1] = node; }}>
-          When I am not coding I enjoy listening to music, watching football, golfing, riding motorcycles, and going on hikes with my wife and our fur child.
-        </li>
+        {intro.bullets.map(({ bullet }, index) => {
+          return (
+            <li key={bullet} ref={(node) => { homeIntroBullets[index] = node; }}>
+              {bullet}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

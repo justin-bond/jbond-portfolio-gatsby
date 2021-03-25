@@ -57,7 +57,7 @@ const Nav = () => {
         <nav className={`${ns}__navigation`}>
           <ul>
             <li>
-              <AnchorLink to={'/'}>Home</AnchorLink>
+              <AnchorLink to={'/'} direction={'left'}>Home</AnchorLink>
             </li>
             <li>
               <Link to={'/#featured-work'} onClick={() => { scrollTo('featured-work'); }}>Work</Link>
