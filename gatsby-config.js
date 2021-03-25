@@ -1,3 +1,9 @@
+const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development';
+
+require('dotenv').config({
+  path: `.env.${ activeEnv }`,
+});
+
 /**
  * Configure your Gatsby site with this file.
  *
@@ -18,6 +24,23 @@ module.exports = {
     `gatsby-plugin-eslint`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    {
+      /**
+       * First up is the WordPress source plugin that connects Gatsby
+       * to your WordPress site.
+       *
+       * visit the plugin docs to learn more
+       * https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wordpress/README.md
+       *
+       */
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // the only required plugin option for WordPress is the GraphQL url.
+        url: `${ process.env.WORDPRESS_URL }/wp/graphql`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -35,7 +58,7 @@ module.exports = {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          `Raleway\:600,700`,
+          `Raleway:600,700`,
           `Share Tech Mono`
         ]
       }
@@ -44,7 +67,7 @@ module.exports = {
       resolve: `@danbruegge/gatsby-plugin-stylelint`,
       options: {
         files: `**/*.scss`,
-        context: `${ __dirname }/src/scss`
+        context: `${__dirname}/src/scss`
       }
     },
     {
@@ -63,4 +86,4 @@ module.exports = {
       },
     },
   ],
-}
+};

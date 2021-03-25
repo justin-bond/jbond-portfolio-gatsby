@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { TweenMax } from 'gsap';
 import { Waypoint } from 'react-waypoint';
@@ -9,11 +8,7 @@ import AnchorLink from './AnchorLink';
 const nsBase = 'component';
 const ns = `${nsBase}-home-other-work`;
 
-const HomeOtherWork = (props) => {
-  const {
-    otherWork
-  } = props;
-
+const HomeOtherWork = ({ otherWork }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -38,21 +33,6 @@ const HomeOtherWork = (props) => {
     return null;
   };
 
-  const renderOtherWork = (key, index) => {
-    const work = key.node;
-
-    return (
-      <li
-        key={work.slug}
-        ref={(node) => { homeOtherWorkBullets[index] = node; }}
-      >
-        <AnchorLink to={`/work/${work.slug}`} className={'code-color-blue'}>
-          { work.title }
-        </AnchorLink>
-      </li>
-    );
-  };
-
   return (
     <Waypoint
       scrollableAncestor={setScrollableAncestor()}
@@ -65,19 +45,22 @@ const HomeOtherWork = (props) => {
           {` Other Work`}
         </div>
         <ul className={`${ns}__items`}>
-          {otherWork.map(renderOtherWork)}
+          {otherWork.map((work, index) => {
+            return (
+              <li
+                key={work.slug}
+                ref={(node) => { homeOtherWorkBullets[index] = node; }}
+              >
+                <AnchorLink to={`/work/${work.slug}`} className={'code-color-blue'}>
+                  { work.title }
+                </AnchorLink>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </Waypoint>
   );
-};
-
-HomeOtherWork.propTypes = {
-  otherWork: PropTypes.arrayOf(PropTypes.shape({}))
-};
-
-HomeOtherWork.defaultProps = {
-  otherWork: null
 };
 
 export default HomeOtherWork;

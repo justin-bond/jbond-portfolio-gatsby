@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
+import parseVideo from '../utils/parseVideo';
 
 const nsBase = 'component';
 const ns = `${nsBase}-work-hero`;
 
-const WorkHero = ({ work }) => {
+const WorkHero = ({ slug, image, video }) => {
   const rootClassnames = classNames({
     [`${ns}`]: true
   });
@@ -22,7 +22,7 @@ const WorkHero = ({ work }) => {
 
   const renderWorkHeroImage = () => {
     return (
-      <img src={work.screenshot} alt={work.slug} />
+      <img src={image} alt={slug} />
     );
   };
 
@@ -31,14 +31,7 @@ const WorkHero = ({ work }) => {
       return (
         <div className={`${ns}__video`}>
           <div className={`${ns}__video-container video-aspect`}>
-            <iframe
-              src={`https://player.vimeo.com/video/${work.video}?autoplay=1&title=0&byline=0&portrait=0`}
-              width={'640'}
-              height={'360'}
-              frameBorder={'0'}
-              title={'video'}
-              allowFullScreen
-            />
+            {parseVideo(video)}
             <button className={`${ns}__video-link close`} type={'button'} onClick={hideShowVideo}>
               Exit Video
             </button>
@@ -69,7 +62,7 @@ const WorkHero = ({ work }) => {
   };
 
   const renderWorkHero = () => {
-    if (work.video) {
+    if (video) {
       return (
         renderWorkHeroVideo()
       );
@@ -87,18 +80,6 @@ const WorkHero = ({ work }) => {
       {renderWorkHero()}
     </div>
   );
-};
-
-WorkHero.propTypes = {
-  work: PropTypes.shape({
-    slug: PropTypes.string,
-    screenshot: PropTypes.string,
-    video: PropTypes.string
-  })
-};
-
-WorkHero.defaultProps = {
-  work: null
 };
 
 export default WorkHero;

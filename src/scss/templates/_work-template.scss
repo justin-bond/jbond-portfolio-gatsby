@@ -16,4 +16,46 @@ $ns: '.template-work';
       @include btn--primary;
     }
   }
+
+  &__title {
+    h1 {
+      font-size: 2em;
+      font-weight: 600;
+      margin: 50px 0;
+
+      @include at-tablet {
+        font-size: 3em;
+      }
+    }
+  }
+
+  &__website-link {
+    font-family: $share-tech-mono;
+    margin-bottom: 22px;
+
+    a {
+      color: solid-color('code-blue');
+      @include link-underline;
+    }
+  }
+
+  &__bullet {
+    list-style-type: none;
+    margin-bottom: 22px;
+    margin-left: 40px;
+
+    &:before {
+      color: solid-color('code-blue');
+      content: '//';
+      margin-left: -40px;
+      margin-right: 20px;
+    }
+  }
+
+  &__disclaimer {
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #DDD;
+  }
 }

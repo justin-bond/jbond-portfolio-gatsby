@@ -10,11 +10,18 @@ function SEO({
   page,
   image
 }) {
-  const { site } = useStaticQuery(
+  const { site, wp } = useStaticQuery(
     graphql`
       query {
         site {
           siteMetadata {
+            title
+            description
+            siteUrl
+          }
+        }
+        wp {
+          generalSettings {
             title
             description
           }
@@ -23,9 +30,15 @@ function SEO({
     `
   );
 
-  const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = `${ site.siteMetadata.title } | Front-End Engineer/Developer`;
-  const defaultImage = `/assets/jb-logo-black.jpg`;
+  const siteTitle = wp.generalSettings.title || site.siteMetadata.title;
+  const siteTagline = wp.generalSettings.description;
+  const defaultTitle = siteTagline ? `${ siteTitle } | ${ siteTagline } ` : siteTitle;
+  const defaultImage = `${ site.siteMetadata.siteUrl }/assets/jb-logo-black.jpg`;
+
+  const metaTitle = title || siteTitle;
+  const metaDescription = description ? description.replace(/(<([^>]+)>)/ig, '') : site.siteMetadata.description;
+  const metaImage = image || defaultImage;
+  const metaUrl = site.siteMetadata.siteUrl;
 
   return (
     <Helmet
@@ -34,7 +47,7 @@ function SEO({
       }}
       title={title}
       defaultTitle={defaultTitle}
-      titleTemplate={`%s | ${ site.siteMetadata.title }`}
+      titleTemplate={`%s | ${ siteTitle }`}
       bodyAttributes={
         {
           'data-page': page || title || site.siteMetadata.title
@@ -46,8 +59,12 @@ function SEO({
           content: metaDescription
         },
         {
+          property: `og:url`,
+          content: metaUrl,
+        },
+        {
           property: `og:title`,
-          content: title ? `${ title } | ${ site.siteMetadata.title }` : defaultTitle
+          content: metaTitle
         },
         {
           property: `og:description`,
@@ -55,7 +72,7 @@ function SEO({
         },
         {
           name: `og:image`,
-          content: `https://justinbond.dev${image || defaultImage}`
+          content: metaImage
         },
         {
           property: `og:type`,
@@ -67,7 +84,7 @@ function SEO({
         },
         {
           name: `twitter:title`,
-          content: title ? `${ title } | ${ site.siteMetadata.title }` : defaultTitle
+          content: metaTitle
         },
         {
           name: `twitter:description`,
@@ -75,7 +92,7 @@ function SEO({
         },
         {
           name: `twitter:image`,
-          content: `https://justinbond.dev${image || defaultImage}`
+          content: metaImage
         }
       ].concat(meta)}
     />
