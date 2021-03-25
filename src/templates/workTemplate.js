@@ -15,8 +15,6 @@ const nsBase = 'template';
 const ns = `${nsBase}-work`;
 
 const workTemplate = ({ data: { project } }) => {
-  console.log(project);
-
   const {
     title,
     slug,
