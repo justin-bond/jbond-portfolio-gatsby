@@ -202,10 +202,10 @@ const Contact = () => {
           <AnchorLink to={'https://www.linkedin.com/in/justinbond909/'} target={'_blank'}>
             <FontAwesomeIcon icon={['fab', 'linkedin']} />
           </AnchorLink>
-          <AnchorLink to={'https://github.com/geekster909'} target={'_blank'}>
+          <AnchorLink to={'https://github.com/justin-bond'} target={'_blank'}>
             <FontAwesomeIcon icon={['fab', 'github']} />
           </AnchorLink>
-          <AnchorLink to={'https://codepen.io/geekster909/'} target={'_blank'}>
+          <AnchorLink to={'https://codepen.io/justin-bond'} target={'_blank'}>
             <FontAwesomeIcon icon={['fab', 'codepen']} />
           </AnchorLink>
         </div>
