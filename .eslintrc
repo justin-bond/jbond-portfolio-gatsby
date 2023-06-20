@@ -1,6 +1,7 @@
 {
   "extends": "airbnb",
   "plugins": ["react"],
+  "parser": "babel-eslint",
   "rules": {
     "no-unused-vars": 1,
     "indent": ["error", 2],
