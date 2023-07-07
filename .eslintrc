@@ -1,11 +1,17 @@
 {
   "extends": "airbnb",
   "plugins": ["react"],
-  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "rules": {
     "no-unused-vars": 1,
     "indent": ["error", 2],
-    "operator-linebreak": [2, "before", { "overrides": { "?": "after", "&&": "after" } }],
+    "operator-linebreak": [
+      2,
+      "before",
+      { "overrides": { "?": "after", "&&": "after" } }
+    ],
     "comma-dangle": [
       "error",
       {
@@ -31,12 +37,25 @@
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "react/jsx-filename-extension": [1, { "extensions": [".js"] }], // use only .js files
-    "react/jsx-curly-brace-presence": [1, { "props": "always", "children": "never" }],
-    "react/jsx-props-no-spreading": [2, {
-      "html": "enforce",
-      "custom": "enforce"
-    }],
-    "react/prop-types": [0]
+    "react/jsx-curly-brace-presence": [
+      1,
+      { "props": "always", "children": "never" }
+    ],
+    "react/jsx-props-no-spreading": [
+      2,
+      {
+        "html": "enforce",
+        "custom": "enforce"
+      }
+    ],
+    "react/prop-types": [0],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": ["arrow-function", "function-declaration"],
+        "unnamedComponents": "function-expression"
+      }
+    ]
   },
   "globals": {
     "window": true,
