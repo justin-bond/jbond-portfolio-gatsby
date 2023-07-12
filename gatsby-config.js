@@ -15,7 +15,7 @@ module.exports = {
   siteMetadata: {
     title: `Justin Bond`,
     siteUrl: `https://justinbond.dev/`,
-    description: `Justin Bond is a Front-End Engineer based out of Orange County, CA.`,
+    description: `Justin Bond is a Frontend Engineer based out of Southern California.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
