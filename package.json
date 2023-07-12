@@ -32,7 +32,7 @@
     "gatsby-transformer-json": "^3.1.0",
     "gatsby-transformer-sharp": "^3.15.0",
     "gsap": "^3.12.2",
-    "node-sass": "^5.0.0",
+    "node-sass": "^9.0.0",
     "prop-types": "^15.8.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
